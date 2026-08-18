@@ -47,7 +47,7 @@
 
     catNav.innerHTML = menu.categories
       .filter(c => catIds.includes(c.id))
-      .map(c => `<button data-goto="${c.id}">${esc(c.name)}</button>`).join("");
+      .map(c => `<button data-goto="${c.id}">${esc(c.nav || c.name)}</button>`).join("");
     observeSections();
   }
 

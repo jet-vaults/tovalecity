@@ -4,6 +4,22 @@
   const NIS = n => "₪" + (Math.round(n * 100) / 100).toLocaleString("he-IL");
   const page = document.body.dataset.page || "";
 
+  /* ---------- splash intro — shown once per visit ---------- */
+  if (!sessionStorage.getItem("tovale_splash")) {
+    sessionStorage.setItem("tovale_splash", "1");
+    const splash = document.createElement("div");
+    splash.className = "splash";
+    splash.setAttribute("aria-hidden", "true");
+    splash.innerHTML = `
+      <img src="/assets/img/logo-white.png" alt="">
+      <div class="splash-dots"><span></span><span></span><span></span></div>`;
+    document.body.prepend(splash);
+    document.body.classList.add("no-scroll");
+    const clear = () => { if (splash.isConnected) splash.remove(); document.body.classList.remove("no-scroll"); };
+    splash.addEventListener("animationend", e => { if (e.animationName === "splash-out") clear(); });
+    setTimeout(clear, 3200);
+  }
+
   const NAV = [
     { href: "/", id: "home", label: "ראשי" },
     { href: "/menu", id: "menu", label: "תפריט" },
@@ -59,7 +75,7 @@
         <div class="footer-brand">
           <img src="/assets/img/logo-white.png" alt="">
           <p>מסעדה חלבית כשרה וקייטרינג לאירועים. מטבח איטלקי עשיר, חם ומשמח — בלב שדרות.</p>
-          <span class="kosher-badge">✡ כשר — <a href="/assets/docs/kosher-certificate.jpeg" target="_blank" rel="noopener">תעודת כשרות</a></span>
+          <span class="kosher-badge"><svg class="icon" style="width:16px;height:16px;color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 16h15L12 3Z"/><path d="M12 21 4.5 8h15L12 21Z"/></svg> כשר — <a href="/assets/docs/kosher-certificate.jpeg" target="_blank" rel="noopener">תעודת כשרות</a></span>
           <div class="footer-social">
             <a href="${C.facebook}" target="_blank" rel="noopener" aria-label="פייסבוק"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12Z"/></svg></a>
             <a href="${C.instagram}" target="_blank" rel="noopener" aria-label="אינסטגרם"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.3" fill="currentColor" stroke="none"/></svg></a>
