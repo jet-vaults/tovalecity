@@ -132,16 +132,8 @@ h1, h2, h3, .display { font-family: var(--font-display); font-weight: 800; line-
   text-decoration: none; color: var(--ink-soft); font-weight: 400;
   padding: 9px 13px; transition: color 0.15s;
 }
-.main-nav a:hover {
-  color: var(--green-900);
-  text-decoration: underline; text-underline-offset: 7px;
-  text-decoration-thickness: 2px; text-decoration-color: var(--green-300);
-}
-.main-nav a[aria-current="page"] {
-  color: var(--green-900);
-  text-decoration: underline; text-underline-offset: 7px;
-  text-decoration-thickness: 2px; text-decoration-color: var(--green-700);
-}
+.main-nav a:hover { color: var(--green-900); }
+.main-nav a[aria-current="page"] { color: var(--green-900); font-weight: 600; }
 .header-cta { display: flex; align-items: center; gap: 10px; }
 .cart-btn {
   position: relative; display: inline-flex; align-items: center; gap: 8px;
