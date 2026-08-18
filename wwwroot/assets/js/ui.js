@@ -122,9 +122,12 @@
   drawer.setAttribute("aria-modal", "true");
   drawer.setAttribute("aria-label", "ההזמנה שלי");
   drawer.innerHTML = `
+    <div class="cart-brand">
+      <img src="/assets/img/logo-white.png" alt="">
+      <button class="cart-close" data-cart-close aria-label="סגירה">✕</button>
+    </div>
     <div class="cart-head">
       <h2>ההזמנה שלי</h2>
-      <button class="sheet-close" style="position:static" data-cart-close aria-label="סגירה">✕</button>
     </div>
     <div class="cart-items" data-cart-items></div>
     <div class="cart-foot">
