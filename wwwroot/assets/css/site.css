@@ -360,6 +360,32 @@ h1, h2, h3, .display { font-family: var(--font-display); font-weight: 800; line-
 .menu-hero p { color: rgba(255, 253, 249, 0.82); max-width: 40rem; }
 .menu-hero .pdf-link { color: var(--green-300); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 
+/* category launcher — icon grid */
+.cat-launcher-wrap { padding-block: clamp(2rem, 5vw, 3.2rem) clamp(1.4rem, 3vw, 2.2rem); }
+.launcher-title {
+  text-align: center; font-size: clamp(1.5rem, 3.4vw, 2.1rem); color: var(--ink);
+  margin-bottom: clamp(1.6rem, 4vw, 2.6rem); position: relative;
+}
+.launcher-title::after {
+  content: ''; display: block; width: 220px; max-width: 40%; height: 7px;
+  background: var(--green-100); margin: 0.5rem auto 0;
+}
+.cat-launcher {
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.6rem 0.8rem;
+  max-width: 1000px; margin-inline: auto;
+}
+@media (max-width: 900px) { .cat-launcher { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 560px) { .cat-launcher { grid-template-columns: repeat(3, 1fr); gap: 1.4rem 0.4rem; } }
+.cat-launcher button {
+  background: none; border: none; display: flex; flex-direction: column; align-items: center; gap: 0.7rem;
+  color: var(--ink); font-weight: 700; font-size: 0.98rem; padding: 0.4rem;
+  transition: transform 0.18s ease, color 0.18s ease;
+}
+.cat-launcher button svg { width: 62px; height: 62px; color: #8a8578; transition: color 0.18s ease, transform 0.18s ease; }
+.cat-launcher button:hover { transform: translateY(-3px); color: var(--green-900); }
+.cat-launcher button:hover svg { color: var(--green-800); }
+@media (max-width: 560px) { .cat-launcher button svg { width: 50px; height: 50px; } .cat-launcher button { font-size: 0.88rem; } }
+
 .menu-toolbar {
   position: sticky; top: var(--header-h); z-index: 90;
   background: rgba(247, 243, 236, 0.94); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
