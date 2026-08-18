@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#f7f3ec"/>
+  <text x="30" y="48" font-family="Rubik, 'Arial Hebrew', Arial, sans-serif" font-size="34" font-weight="700" fill="#1e402c" text-anchor="middle">ט</text>
+  <path d="M40 22 C40 13, 47 7, 56 6 C56 15, 49 21, 40 22Z" fill="#57a63e"/>
+</svg>

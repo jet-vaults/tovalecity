@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>אפשרויות פאביקון - טובל'ה בעיר</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Rubik', sans-serif; background: #fff; color: #26241f; padding: 3rem clamp(1rem,4vw,3rem); }
+    h1 { color: #1e402c; margin-bottom: .3rem; }
+    .sub { color: #5c574c; margin-bottom: 2.5rem; }
+    .row { display: flex; align-items: center; gap: 2rem; padding: 1.6rem; border: 1px solid #eae5dc; border-radius: 5px; margin-bottom: 1.2rem; max-width: 900px; }
+    .num { background: #1e402c; color: #fff; border-radius: 5px; padding: 6px 14px; font-weight: 700; flex-shrink: 0; }
+    .sizes { display: flex; align-items: center; gap: 1.6rem; }
+    .sizes > div { text-align: center; color: #5c574c; font-size: .78rem; }
+    .sizes img, .sizes object { display: block; margin: 0 auto 6px; }
+    .tab { display: flex; align-items: center; gap: 8px; background: #f1f0ec; border-radius: 8px 8px 0 0; padding: 8px 14px; font-size: .85rem; color: #444; width: 200px; }
+    .tab img { width: 16px; height: 16px; }
+    .name { font-weight: 600; min-width: 150px; }
+  </style>
+</head>
+<body>
+  <h1>אפשרויות פאביקון</h1>
+  <p class="sub">כל אפשרות מוצגת בגדול, בקטן, וכפי שתיראה בלשונית דפדפן. בחרו מספר.</p>
+  <div id="rows"></div>
+  <script>
+    const options = [
+      { n: 1, name: "העלים של הלוגו", file: "/assets/img/favicon-1.svg" },
+      { n: 2, name: "מונוגרמה ט' על ירוק", file: "/assets/img/favicon-2.svg" },
+      { n: 3, name: "ט' עם עלה", file: "/assets/img/favicon-3.svg" },
+      { n: 4, name: "מזלג ועלה", file: "/assets/img/favicon-4.svg" },
+      { n: 5, name: "משולש פיצה", file: "/assets/img/favicon-5.svg" }
+    ];
+    document.getElementById("rows").innerHTML = options.map(o => `
+      <div class="row">
+        <span class="num">${o.n}</span>
+        <span class="name">${o.name}</span>
+        <div class="sizes">
+          <div><img src="${o.file}" width="64" height="64">64</div>
+          <div><img src="${o.file}" width="32" height="32">32</div>
+          <div><img src="${o.file}" width="16" height="16">16</div>
+          <div><div class="tab"><img src="${o.file}"><span>טובל'ה בעיר</span></div>לשונית</div>
+        </div>
+      </div>`).join("");
+  </script>
+</body>
+</html>
