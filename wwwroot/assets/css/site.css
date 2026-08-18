@@ -133,11 +133,11 @@ h1, h2, h3, .display { font-family: var(--font-display); font-weight: 800; line-
 .header-cta { display: flex; align-items: center; gap: 10px; }
 .cart-btn {
   position: relative; display: inline-flex; align-items: center; gap: 8px;
-  background: var(--cream); color: var(--green-900);
+  background: #f2efe7; color: var(--green-900);
   border: none; border-radius: 5px; padding: 10px 20px; font-weight: 800; font-size: 1rem;
   text-decoration: none; transition: transform 0.15s, background 0.15s; min-height: 44px;
 }
-.cart-btn:hover { background: var(--white); transform: translateY(-1px); }
+.cart-btn:hover { background: #faf8f3; transform: translateY(-1px); }
 .cart-count {
   display: none; align-items: center; justify-content: center;
   min-width: 22px; height: 22px; padding-inline: 6px;
