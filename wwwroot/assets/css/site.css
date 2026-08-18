@@ -240,21 +240,6 @@ h1, h2, h3, .display { font-family: var(--font-display); font-weight: 800; line-
 .section-green .section-head p { color: rgba(255, 253, 249, 0.8); }
 .section-head.center { margin-inline: auto; text-align: center; }
 
-/* decorative faded food elements on section sides */
-.deco-food {
-  position: absolute; top: 0; bottom: 0; inset-inline-start: clamp(0.6rem, 2.5vw, 2.5rem);
-  display: flex; flex-direction: column; justify-content: center; gap: clamp(2.2rem, 7vh, 4.5rem);
-  pointer-events: none; user-select: none; z-index: 0;
-}
-.deco-food svg {
-  width: clamp(85px, 9vw, 140px); height: auto;
-  color: rgba(30, 64, 44, 0.09);
-  transform: rotate(-8deg);
-}
-.deco-food svg:nth-child(2) { transform: rotate(7deg) translateX(-14%); }
-.deco-food svg:nth-child(3) { transform: rotate(-5deg); }
-.section-green .deco-food svg { color: rgba(255, 253, 249, 0.07); }
-@media (max-width: 980px) { .deco-food { display: none; } }
 
 /* ============ cards / grids ============ */
 .dish-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }

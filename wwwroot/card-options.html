@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>אפשרויות עיצוב כרטיס מנה — טובל'ה בעיר</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <style>
+    body { padding: 2rem clamp(1rem, 4vw, 3rem) 5rem; }
+    .opt-section { max-width: 1180px; margin-inline: auto; margin-bottom: 4.5rem; }
+    .opt-label {
+      display: inline-flex; align-items: center; gap: 10px; margin-bottom: 1.2rem;
+      background: var(--green-900); color: #fff; border-radius: 5px; padding: 8px 18px;
+      font-weight: 800; font-size: 1.15rem;
+    }
+    .opt-note { color: var(--ink-soft); margin: -0.6rem 0 1.2rem; font-size: .95rem; }
+    .demo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    @media (max-width: 900px) { .demo-grid { grid-template-columns: 1fr; } }
+    .price-big { font-weight: 800; font-size: 1.2rem; color: var(--green-900); white-space: nowrap; }
+
+    /* ===== option 1: classic (current) — uses site styles ===== */
+
+    /* ===== option 2: compact menu row ===== */
+    .v2-card {
+      background: #fff; border: 1px solid var(--beige); border-radius: 5px;
+      padding: 1.1rem 1.2rem; display: flex; flex-direction: column; gap: .45rem;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .v2-card:hover { border-color: var(--green-300); box-shadow: var(--shadow-card); }
+    .v2-top { display: flex; align-items: baseline; gap: 10px; }
+    .v2-top .n { font-weight: 800; font-size: 1.12rem; }
+    .v2-dots { flex: 1; border-bottom: 2px dotted var(--sand); transform: translateY(-4px); }
+    .v2-desc { color: var(--ink-soft); font-size: .93rem; line-height: 1.5; }
+    .v2-foot { display: flex; align-items: center; justify-content: space-between; margin-top: .4rem; }
+    .v2-thumb { width: 64px; height: 64px; border-radius: 5px; object-fit: cover; }
+    .v2-row { display: flex; gap: 12px; }
+    .v2-row > div { flex: 1; }
+    .v2-add {
+      background: none; border: 1.5px solid var(--green-900); color: var(--green-900);
+      border-radius: 5px; padding: 7px 16px; font-weight: 700; font-size: .9rem;
+    }
+    .v2-add:hover { background: var(--green-900); color: #fff; }
+
+    /* ===== option 3: photo-first with overlaid price ===== */
+    .v3-card {
+      background: #fff; border-radius: 5px; overflow: hidden; box-shadow: var(--shadow-card);
+      display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s;
+    }
+    .v3-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-pop); }
+    .v3-media { position: relative; aspect-ratio: 16 / 10; }
+    .v3-media img { width: 100%; height: 100%; object-fit: cover; }
+    .v3-media.nophoto { background: var(--green-900); display: flex; align-items: center; justify-content: center; }
+    .v3-media.nophoto span { color: #fff; font-weight: 800; font-size: 1.5rem; padding: 1rem; text-align: center; }
+    .v3-price {
+      position: absolute; bottom: 10px; inset-inline-start: 10px;
+      background: #fff; color: var(--green-900); font-weight: 800;
+      border-radius: 5px; padding: 4px 12px; box-shadow: 0 2px 10px rgba(0,0,0,.18);
+    }
+    .v3-body { padding: 1rem 1.1rem 1.1rem; display: flex; flex-direction: column; gap: .4rem; flex: 1; }
+    .v3-body .n { font-weight: 800; font-size: 1.1rem; }
+    .v3-body .d { color: var(--ink-soft); font-size: .92rem; flex: 1; }
+    .v3-add { width: 100%; background: var(--green-900); color: #fff; border: none; border-radius: 5px; padding: 11px; font-weight: 700; }
+    .v3-add:hover { background: var(--green-700); }
+
+    /* ===== option 4: minimal flat outline ===== */
+    .v4-card {
+      background: transparent; border: 1.5px solid var(--beige); border-radius: 5px;
+      padding: 1.4rem 1.3rem; display: flex; flex-direction: column; gap: .55rem;
+      transition: border-color .2s, background .2s;
+    }
+    .v4-card:hover { border-color: var(--green-900); background: #fff; }
+    .v4-tag { font-size: .74rem; font-weight: 700; color: var(--green-700); letter-spacing: .06em; }
+    .v4-card .n { font-weight: 800; font-size: 1.25rem; color: var(--ink); }
+    .v4-card .d { color: var(--ink-soft); font-size: .94rem; flex: 1; }
+    .v4-foot { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--beige); padding-top: .8rem; margin-top: .4rem; }
+    .v4-add { background: none; border: none; color: var(--green-900); font-weight: 800; font-size: .95rem; padding: 4px 0; }
+    .v4-add:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+    /* ===== option 5: green brand card ===== */
+    .v5-card {
+      background: var(--green-900); color: #fff; border-radius: 5px;
+      padding: 1.4rem 1.3rem; display: flex; flex-direction: column; gap: .55rem;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .v5-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-pop); }
+    .v5-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 5px; margin-bottom: .4rem; }
+    .v5-card .n { font-weight: 800; font-size: 1.2rem; }
+    .v5-card .d { color: rgba(255,255,255,.78); font-size: .93rem; flex: 1; }
+    .v5-foot { display: flex; align-items: center; justify-content: space-between; margin-top: .5rem; }
+    .v5-price { font-weight: 800; font-size: 1.25rem; color: var(--green-300); }
+    .v5-add { background: #fff; color: var(--green-900); border: none; border-radius: 5px; padding: 9px 18px; font-weight: 800; }
+    .v5-add:hover { background: var(--green-100); }
+  </style>
+</head>
+<body data-page="">
+<main id="main" style="padding-top:1rem">
+  <div class="opt-section" style="margin-bottom:2.5rem">
+    <h1 style="font-size:clamp(1.8rem,4vw,2.6rem)">אפשרויות עיצוב לכרטיסי המנות</h1>
+    <p style="color:var(--ink-soft)">חמש גרסאות — כל אחת מוצגת עם מנה עם תמונה ושתי מנות בלי תמונה. בחרו את המספר שאתם הכי אוהבים.</p>
+  </div>
+
+  <!-- OPTION 1 -->
+  <section class="opt-section">
+    <span class="opt-label">אפשרות 1 — הקלאסית (הנוכחית)</span>
+    <p class="opt-note">פאנל ירוק בהיר עם שם המנה כשאין תמונה, גוף לבן, כפתור ירוק מלא.</p>
+    <div class="demo-grid">
+      <article class="dish-card">
+        <div class="dish-media"><img src="/assets/img/pizza-closeup-sm.webp" alt=""></div>
+        <div class="dish-body">
+          <div class="tag-row"><span class="tag">צמחוני</span><span class="tag">פופולרי</span></div>
+          <h3 class="dish-name">פיצה טובל'ה</h3>
+          <p class="dish-desc">בצק הבית, רוטב עגבניות וגבינות — בדיוק כמו שאתם אוהבים</p>
+          <div class="dish-foot"><span class="price"><span class="from">החל מ־</span>₪27</span><button class="add-btn">הוסף להזמנה +</button></div>
+        </div>
+      </article>
+      <article class="dish-card">
+        <div class="dish-media no-photo"><span class="np-name">סלט חלומי מוקפץ</span></div>
+        <div class="dish-body">
+          <div class="tag-row"><span class="tag">צמחוני</span></div>
+          <h3 class="dish-name">סלט חלומי מוקפץ</h3>
+          <p class="dish-desc">מיקס ירק טובל'ה, גבינת חלומי, בצל סגול ופטריות טריות מוקפצים בטריאקי</p>
+          <div class="dish-foot"><span class="price">₪52</span><button class="add-btn">הוסף להזמנה +</button></div>
+        </div>
+      </article>
+      <article class="dish-card">
+        <div class="dish-media no-photo"><span class="np-name">שקשוקה עגבניות</span></div>
+        <div class="dish-body">
+          <div class="tag-row"><span class="tag">פופולרי</span></div>
+          <h3 class="dish-name">שקשוקה עגבניות</h3>
+          <p class="dish-desc">זוג ביצים ותוספת לבחירה, מוגשת בליווי סלט ישראלי וג'בטת הבית</p>
+          <div class="dish-foot"><span class="price">₪47</span><button class="add-btn">הוסף להזמנה +</button></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- OPTION 2 -->
+  <section class="opt-section">
+    <span class="opt-label">אפשרות 2 — שורת תפריט קומפקטית</span>
+    <p class="opt-note">בהשראת תפריט מודפס: שם, נקודות מנחות ומחיר באותה שורה. תמונה קטנה בצד כשקיימת. קומפקטי — רואים הרבה מנות במסך אחד.</p>
+    <div class="demo-grid">
+      <div class="v2-card">
+        <div class="v2-row">
+          <img class="v2-thumb" src="/assets/img/pizza-closeup-sm.webp" alt="">
+          <div>
+            <div class="v2-top"><span class="n">פיצה טובל'ה</span><span class="v2-dots"></span><span class="price-big">₪27</span></div>
+            <p class="v2-desc">בצק הבית, רוטב עגבניות וגבינות — בדיוק כמו שאתם אוהבים</p>
+          </div>
+        </div>
+        <div class="v2-foot"><span class="tag">פופולרי</span><button class="v2-add">+ להזמנה</button></div>
+      </div>
+      <div class="v2-card">
+        <div class="v2-top"><span class="n">סלט חלומי מוקפץ</span><span class="v2-dots"></span><span class="price-big">₪52</span></div>
+        <p class="v2-desc">מיקס ירק טובל'ה, גבינת חלומי, בצל סגול ופטריות טריות מוקפצים בטריאקי</p>
+        <div class="v2-foot"><span class="tag">צמחוני</span><button class="v2-add">+ להזמנה</button></div>
+      </div>
+      <div class="v2-card">
+        <div class="v2-top"><span class="n">שקשוקה עגבניות</span><span class="v2-dots"></span><span class="price-big">₪47</span></div>
+        <p class="v2-desc">זוג ביצים ותוספת לבחירה, מוגשת בליווי סלט ישראלי וג'בטת הבית</p>
+        <div class="v2-foot"><span class="tag">פופולרי</span><button class="v2-add">+ להזמנה</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPTION 3 -->
+  <section class="opt-section">
+    <span class="opt-label">אפשרות 3 — תמונה גדולה ומחיר צף</span>
+    <p class="opt-note">אזור תמונה גדול עם תגית מחיר צפה. כשאין תמונה — פאנל ירוק כהה עם שם המנה בלבן. כפתור ברוחב מלא, נוח בנייד.</p>
+    <div class="demo-grid">
+      <article class="v3-card">
+        <div class="v3-media"><img src="/assets/img/pizza-closeup-sm.webp" alt=""><span class="v3-price">₪27</span></div>
+        <div class="v3-body">
+          <span class="n">פיצה טובל'ה</span>
+          <span class="d">בצק הבית, רוטב עגבניות וגבינות — בדיוק כמו שאתם אוהבים</span>
+          <button class="v3-add">הוסף להזמנה +</button>
+        </div>
+      </article>
+      <article class="v3-card">
+        <div class="v3-media nophoto"><span>סלט חלומי מוקפץ</span><span class="v3-price">₪52</span></div>
+        <div class="v3-body">
+          <span class="n">סלט חלומי מוקפץ</span>
+          <span class="d">מיקס ירק טובל'ה, גבינת חלומי, בצל סגול ופטריות טריות מוקפצים בטריאקי</span>
+          <button class="v3-add">הוסף להזמנה +</button>
+        </div>
+      </article>
+      <article class="v3-card">
+        <div class="v3-media nophoto"><span>שקשוקה עגבניות</span><span class="v3-price">₪47</span></div>
+        <div class="v3-body">
+          <span class="n">שקשוקה עגבניות</span>
+          <span class="d">זוג ביצים ותוספת לבחירה, מוגשת בליווי סלט ישראלי וג'בטת הבית</span>
+          <button class="v3-add">הוסף להזמנה +</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- OPTION 4 -->
+  <section class="opt-section">
+    <span class="opt-label">אפשרות 4 — מינימלי ונקי</span>
+    <p class="opt-note">בלי תמונות ובלי צל: מסגרת דקה, טיפוגרפיה בלבד, קו מפריד לפני המחיר. אלגנטי ושקט, בהשראת מסעדות עדכניות.</p>
+    <div class="demo-grid">
+      <div class="v4-card">
+        <span class="v4-tag">פופולרי · צמחוני</span>
+        <span class="n">פיצה טובל'ה</span>
+        <span class="d">בצק הבית, רוטב עגבניות וגבינות — בדיוק כמו שאתם אוהבים</span>
+        <div class="v4-foot"><span class="price-big">החל מ־₪27</span><button class="v4-add">+ הוסף להזמנה</button></div>
+      </div>
+      <div class="v4-card">
+        <span class="v4-tag">צמחוני</span>
+        <span class="n">סלט חלומי מוקפץ</span>
+        <span class="d">מיקס ירק טובל'ה, גבינת חלומי, בצל סגול ופטריות טריות מוקפצים בטריאקי</span>
+        <div class="v4-foot"><span class="price-big">₪52</span><button class="v4-add">+ הוסף להזמנה</button></div>
+      </div>
+      <div class="v4-card">
+        <span class="v4-tag">פופולרי</span>
+        <span class="n">שקשוקה עגבניות</span>
+        <span class="d">זוג ביצים ותוספת לבחירה, מוגשת בליווי סלט ישראלי וג'בטת הבית</span>
+        <div class="v4-foot"><span class="price-big">₪47</span><button class="v4-add">+ הוסף להזמנה</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPTION 5 -->
+  <section class="opt-section">
+    <span class="opt-label">אפשרות 5 — כרטיס ירוק ממותג</span>
+    <p class="opt-note">כרטיסים בירוק המותג עם טקסט בהיר, מחיר בירוק בהיר וכפתור לבן. נועז ובולט — האתר מרגיש מאוד "טובל'ה".</p>
+    <div class="demo-grid">
+      <div class="v5-card">
+        <img src="/assets/img/pizza-closeup-sm.webp" alt="">
+        <span class="n">פיצה טובל'ה</span>
+        <span class="d">בצק הבית, רוטב עגבניות וגבינות — בדיוק כמו שאתם אוהבים</span>
+        <div class="v5-foot"><span class="v5-price">₪27</span><button class="v5-add">הוסף להזמנה +</button></div>
+      </div>
+      <div class="v5-card">
+        <span class="n">סלט חלומי מוקפץ</span>
+        <span class="d">מיקס ירק טובל'ה, גבינת חלומי, בצל סגול ופטריות טריות מוקפצים בטריאקי</span>
+        <div class="v5-foot"><span class="v5-price">₪52</span><button class="v5-add">הוסף להזמנה +</button></div>
+      </div>
+      <div class="v5-card">
+        <span class="n">שקשוקה עגבניות</span>
+        <span class="d">זוג ביצים ותוספת לבחירה, מוגשת בליווי סלט ישראלי וג'בטת הבית</span>
+        <div class="v5-foot"><span class="v5-price">₪47</span><button class="v5-add">הוסף להזמנה +</button></div>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
