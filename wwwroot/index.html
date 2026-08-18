@@ -228,7 +228,7 @@
 <script>
   document.addEventListener("DOMContentLoaded", async () => {
     const menu = await window.tovaleLoadMenu();
-    const featured = menu.items.filter(i => i.featured && i.available !== false).slice(0, 8);
+    const featured = menu.items.filter(i => i.featured && i.available !== false).slice(0, 6);
     document.querySelector("[data-featured]").innerHTML = featured.map(window.tovaleDishCard).join("");
   });
 </script>

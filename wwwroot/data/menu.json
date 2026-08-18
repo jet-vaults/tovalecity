@@ -1,386 +1,1104 @@
 {
   "currency": "₪",
-  "toppings": ["זיתים ירוקים", "זיתים שחורים", "פטריות טריות", "טונה", "בצל", "עגבניות שרי", "תירס", "גמבה", "חצילים", "בטטה", "ביצה קשה", "פלפל חריף", "בולגרית", "אנשובי"],
+  "toppings": [
+    "זיתים ירוקים",
+    "זיתים שחורים",
+    "פטריות טריות",
+    "טונה",
+    "בצל",
+    "עגבניות שרי",
+    "תירס",
+    "גמבה",
+    "חצילים",
+    "בטטה",
+    "ביצה קשה",
+    "פלפל חריף",
+    "בולגרית",
+    "אנשובי"
+  ],
   "categories": [
-    { "id": "breakfast", "name": "בוקר ישראלי", "nav": "בוקר", "note": "מוגש בין השעות 8:00–16:00" },
-    { "id": "starters", "name": "מנות ראשונות", "nav": "ראשונות" },
-    { "id": "salads", "name": "הסלטים שלנו", "nav": "סלטים" },
-    { "id": "pizzas", "name": "הפיצות שלנו", "nav": "פיצות" },
-    { "id": "focaccias", "name": "הפוקצ'ות שלנו", "nav": "פוקצ'ות" },
-    { "id": "sandwiches", "name": "הכריכים שלנו", "nav": "כריכים", "note": "ג'בטה שנאפית מידי יום במקום, מוגשים לצד סלט ירוק, בולגרית, גבינת שמנת, תירס וכרוב הבית" },
-    { "id": "toasts", "name": "הטוסטים שלנו", "nav": "טוסטים", "note": "מוגשים בליווי סלט ישראלי ירוק, קוביית בולגרית, תירס, גבינת שמנת וכרוב" },
-    { "id": "pastries", "name": "המאפים שלנו", "nav": "מאפים" },
-    { "id": "pastas", "name": "הפסטות שלנו", "nav": "פסטות", "note": "רטבים לבחירה ללא תוספת תשלום: אלפרדו / עגבניות / רוזה / הקרמה" },
-    { "id": "gluten-free", "name": "ללא גלוטן", "nav": "ללא גלוטן" },
-    { "id": "desserts", "name": "הקינוחים שלנו", "nav": "קינוחים", "note": "מוגשים לצד קצפת וגלידת וניל" },
-    { "id": "drinks", "name": "שתיה קלה", "nav": "שתייה" }
+    {
+      "id": "breakfast",
+      "name": "בוקר ישראלי",
+      "nav": "בוקר",
+      "note": "מוגש בין השעות 8:00–16:00"
+    },
+    {
+      "id": "starters",
+      "name": "מנות ראשונות",
+      "nav": "ראשונות"
+    },
+    {
+      "id": "salads",
+      "name": "הסלטים שלנו",
+      "nav": "סלטים"
+    },
+    {
+      "id": "pizzas",
+      "name": "הפיצות שלנו",
+      "nav": "פיצות"
+    },
+    {
+      "id": "focaccias",
+      "name": "הפוקצ'ות שלנו",
+      "nav": "פוקצ'ות"
+    },
+    {
+      "id": "sandwiches",
+      "name": "הכריכים שלנו",
+      "nav": "כריכים",
+      "note": "ג'בטה שנאפית מידי יום במקום, מוגשים לצד סלט ירוק, בולגרית, גבינת שמנת, תירס וכרוב הבית"
+    },
+    {
+      "id": "toasts",
+      "name": "הטוסטים שלנו",
+      "nav": "טוסטים",
+      "note": "מוגשים בליווי סלט ישראלי ירוק, קוביית בולגרית, תירס, גבינת שמנת וכרוב"
+    },
+    {
+      "id": "pastries",
+      "name": "המאפים שלנו",
+      "nav": "מאפים"
+    },
+    {
+      "id": "pastas",
+      "name": "הפסטות שלנו",
+      "nav": "פסטות",
+      "note": "רטבים לבחירה ללא תוספת תשלום: אלפרדו / עגבניות / רוזה / הקרמה"
+    },
+    {
+      "id": "gluten-free",
+      "name": "ללא גלוטן",
+      "nav": "ללא גלוטן"
+    },
+    {
+      "id": "desserts",
+      "name": "הקינוחים שלנו",
+      "nav": "קינוחים",
+      "note": "מוגשים לצד קצפת וגלידת וניל"
+    },
+    {
+      "id": "drinks",
+      "name": "שתיה קלה",
+      "nav": "שתייה"
+    }
   ],
   "items": [
     {
-      "id": "breakfast-personal", "categoryId": "breakfast", "name": "בוקר ישראלי",
+      "id": "breakfast-personal",
+      "categoryId": "breakfast",
+      "name": "בוקר ישראלי",
       "description": "2 ביצים לבחירה, פוקצ'ת הבית, סלט ישראלי וגבינה בולגרית, שתייה קרה וחמה",
-      "price": 60, "available": true, "featured": false, "tags": ["צמחוני"],
-      "options": [
-        { "id": "format", "name": "מגש", "type": "single", "required": true, "choices": [
-          { "id": "single", "label": "אישי", "priceDelta": 0 },
-          { "id": "double", "label": "זוגי", "priceDelta": 50 }
-        ] },
-        { "id": "eggs", "name": "הביצים שלכם", "type": "single", "required": false, "choices": [
-          { "id": "sunny", "label": "עין", "priceDelta": 0 },
-          { "id": "scrambled", "label": "מקושקשת", "priceDelta": 0 },
-          { "id": "omelette", "label": "חביתה", "priceDelta": 0 },
-          { "id": "hard", "label": "קשה", "priceDelta": 0 }
-        ] }
-      ]
-    },
-    {
-      "id": "shakshuka", "categoryId": "breakfast", "name": "שקשוקה עגבניות",
-      "description": "זוג ביצים ותוספת לבחירה, מוגשת בליווי סלט ישראלי וג'בטת הבית",
-      "price": 47, "available": true, "featured": true, "tags": ["צמחוני", "פופולרי"],
-      "options": [
-        { "id": "extra", "name": "תוספת לבחירה", "type": "single", "required": true, "choices": [
-          { "id": "pesto", "label": "פסטו", "priceDelta": 0 },
-          { "id": "eggplant", "label": "חצילים", "priceDelta": 0 },
-          { "id": "bulgarit", "label": "בולגרית", "priceDelta": 0 }
-        ] }
-      ]
-    },
-    {
-      "id": "breakfast-box", "categoryId": "breakfast", "name": "מארז ארוחת הבוקר שלנו",
-      "description": "מגש אירוח בליווי שתי ביצים לבחירה, מתבלי הבית, שתייה קרה, זוג לחמניות ביס, קיש קטן וקינוח",
-      "price": 79, "available": true, "featured": false, "tags": ["צמחוני"]
-    },
-
-    {
-      "id": "mushrooms-teriyaki", "categoryId": "starters", "name": "פטריות מוקפצות",
-      "description": "פטריות מוקפצות בטריאקי על בסיס תערובת עלי חסה",
-      "price": 27, "available": true, "featured": false, "tags": ["צמחוני"]
-    },
-    {
-      "id": "arancini", "categoryId": "starters", "name": "ארנצ'יני",
-      "description": "3 כדורי ריזוטו במילוי מיקס גבינות, עטופים בפירורי לחם",
-      "price": 41, "available": true, "featured": true, "tags": ["צמחוני", "פופולרי"],
-      "options": [
-        { "id": "base", "name": "על בסיס", "type": "single", "required": true, "choices": [
-          { "id": "rosa", "label": "רוטב רוזה", "priceDelta": 0 },
-          { "id": "lettuce", "label": "מצע חסה", "priceDelta": 0 }
-        ] }
-      ]
-    },
-    {
-      "id": "home-fries", "categoryId": "starters", "name": "הום פרייז",
-      "description": "קוביות תפוח אדמה מוקפצות בצ'ילי מעודן",
-      "price": 38, "available": true, "featured": false, "tags": ["צמחוני", "חריף"]
-    },
-    {
-      "id": "garlic-bread", "categoryId": "starters", "name": "לחם שום",
-      "description": "לחם שום ביתי, חם מהתנור",
-      "price": 17, "available": true, "featured": false, "tags": ["צמחוני"],
-      "options": [
-        { "id": "size", "name": "גודל", "type": "single", "required": true, "choices": [
-          { "id": "s", "label": "קטן", "priceDelta": 0 },
-          { "id": "m", "label": "בינוני", "priceDelta": 10 },
-          { "id": "l", "label": "גדול", "priceDelta": 15 }
-        ] }
-      ]
-    },
-    {
-      "id": "house-crostini", "categoryId": "starters", "name": "צנימי הבית",
-      "description": "צנימים עם זעתר בליווי גבינת שמנת וממרח פסטו",
-      "price": 30, "available": true, "featured": false, "tags": ["צמחוני"]
-    },
-
-    {
-      "id": "salad-tovale", "categoryId": "salads", "name": "סלט טובל'ה",
-      "description": "מיקס ירק טובל'ה, בולגרית, טונה, תירס, קוביות תפוח אדמה וביצה קשה בתיבול שמן זית וזעתר",
-      "price": 47, "available": true, "featured": false, "tags": ["פופולרי"],
-      "addonGroup": "salad-extras"
-    },
-    {
-      "id": "salad-halloumi-fried", "categoryId": "salads", "name": "סלט חלומי מטוגן",
-      "description": "מיקס ירק טובל'ה, בולגרית, תירס וגבינת חלומי בתיבול שמן זית וזעתר",
-      "price": 47, "available": true, "featured": false, "tags": ["צמחוני"],
-      "addonGroup": "salad-extras"
-    },
-    {
-      "id": "salad-greek", "categoryId": "salads", "name": "סלט יווני",
-      "description": "מיקס ירק טובל'ה, בולגרית, קוביות גמבה וזיתים שחורים בתיבול שמן זית וזעתר",
-      "price": 47, "available": true, "featured": false, "tags": ["צמחוני"],
-      "addonGroup": "salad-extras"
-    },
-    {
-      "id": "salad-halloumi-stirfry", "categoryId": "salads", "name": "סלט חלומי מוקפץ",
-      "description": "מיקס ירק טובל'ה, גבינת חלומי, בצל סגול ופטריות טריות מוקפצים בטריאקי",
-      "price": 52, "available": true, "featured": true, "tags": ["צמחוני", "פופולרי"],
-      "addonGroup": "salad-extras"
-    },
-    {
-      "id": "salad-tuna", "categoryId": "salads", "name": "סלט טונה",
-      "description": "מיקס ירק טובל'ה, נתחי טונה, תירס, תפוח אדמה, ביצה קשה ומלפפון חמוץ",
-      "price": 47, "available": true, "featured": false, "tags": [],
-      "addonGroup": "salad-extras"
-    },
-    {
-      "id": "salad-crispy-batata", "categoryId": "salads", "name": "סלט קריספי בטטה",
-      "description": "מיקס ירק טובל'ה, ניוקי גבינות, בולגרית ובטטה קריספית",
-      "price": 53, "available": true, "featured": false, "tags": ["צמחוני"],
-      "addonGroup": "salad-extras"
-    },
-    {
-      "id": "salad-house", "categoryId": "salads", "name": "סלט הבית",
-      "description": "מלפפון, חסה, שרי, בולגרית, תירס, כרוב סגול וכדור גבינת שמנת",
-      "price": 30, "available": true, "featured": false, "tags": ["צמחוני"],
-      "addonGroup": "salad-extras"
-    },
-
-    {
-      "id": "pizza", "categoryId": "pizzas", "name": "פיצה טובל'ה",
-      "description": "בצק הבית, רוטב עגבניות וגבינות — בדיוק כמו שאתם אוהבים",
-      "price": 27, "image": "assets/img/pizza-closeup-sm.webp", "imageLg": "assets/img/pizza-closeup-lg.webp",
-      "available": true, "featured": true, "tags": ["צמחוני", "פופולרי"],
-      "options": [
-        { "id": "size", "name": "גודל", "type": "single", "required": true, "choices": [
-          { "id": "s", "label": "S אישית", "priceDelta": 0 },
-          { "id": "m", "label": "M בינונית", "priceDelta": 9 },
-          { "id": "l", "label": "L משפחתית", "priceDelta": 18 }
-        ] }
+      "price": 60,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני"
       ],
-      "addons": { "name": "תוספות לפיצה", "source": "toppings", "priceBySize": { "s": 4, "m": 6, "l": 6 } }
+      "options": [
+        {
+          "id": "format",
+          "name": "מגש",
+          "type": "single",
+          "required": true,
+          "choices": [
+            {
+              "id": "single",
+              "label": "אישי",
+              "priceDelta": 0
+            },
+            {
+              "id": "double",
+              "label": "זוגי",
+              "priceDelta": 50
+            }
+          ]
+        },
+        {
+          "id": "eggs",
+          "name": "הביצים שלכם",
+          "type": "single",
+          "required": false,
+          "choices": [
+            {
+              "id": "sunny",
+              "label": "עין",
+              "priceDelta": 0
+            },
+            {
+              "id": "scrambled",
+              "label": "מקושקשת",
+              "priceDelta": 0
+            },
+            {
+              "id": "omelette",
+              "label": "חביתה",
+              "priceDelta": 0
+            },
+            {
+              "id": "hard",
+              "label": "קשה",
+              "priceDelta": 0
+            }
+          ]
+        }
+      ]
     },
-
     {
-      "id": "focaccia-house", "categoryId": "focaccias", "name": "פוקצ'ת הבית",
+      "id": "shakshuka",
+      "categoryId": "breakfast",
+      "name": "שקשוקה עגבניות",
+      "description": "זוג ביצים ותוספת לבחירה, מוגשת בליווי סלט ישראלי וג'בטת הבית",
+      "price": 47,
+      "available": true,
+      "featured": true,
+      "tags": [
+        "צמחוני",
+        "פופולרי"
+      ],
+      "options": [
+        {
+          "id": "extra",
+          "name": "תוספת לבחירה",
+          "type": "single",
+          "required": true,
+          "choices": [
+            {
+              "id": "pesto",
+              "label": "פסטו",
+              "priceDelta": 0
+            },
+            {
+              "id": "eggplant",
+              "label": "חצילים",
+              "priceDelta": 0
+            },
+            {
+              "id": "bulgarit",
+              "label": "בולגרית",
+              "priceDelta": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "breakfast-box",
+      "categoryId": "breakfast",
+      "name": "מארז ארוחת הבוקר שלנו",
+      "description": "מגש אירוח בליווי שתי ביצים לבחירה, מתבלי הבית, שתייה קרה, זוג לחמניות ביס, קיש קטן וקינוח",
+      "price": 79,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני"
+      ]
+    },
+    {
+      "id": "mushrooms-teriyaki",
+      "categoryId": "starters",
+      "name": "פטריות מוקפצות",
+      "description": "פטריות מוקפצות בטריאקי על בסיס תערובת עלי חסה",
+      "price": 27,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני"
+      ]
+    },
+    {
+      "id": "arancini",
+      "categoryId": "starters",
+      "name": "ארנצ'יני",
+      "description": "3 כדורי ריזוטו במילוי מיקס גבינות, עטופים בפירורי לחם",
+      "price": 41,
+      "available": true,
+      "featured": true,
+      "tags": [
+        "צמחוני",
+        "פופולרי"
+      ],
+      "options": [
+        {
+          "id": "base",
+          "name": "על בסיס",
+          "type": "single",
+          "required": true,
+          "choices": [
+            {
+              "id": "rosa",
+              "label": "רוטב רוזה",
+              "priceDelta": 0
+            },
+            {
+              "id": "lettuce",
+              "label": "מצע חסה",
+              "priceDelta": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "home-fries",
+      "categoryId": "starters",
+      "name": "הום פרייז",
+      "description": "קוביות תפוח אדמה מוקפצות בצ'ילי מעודן",
+      "price": 38,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני",
+        "חריף"
+      ]
+    },
+    {
+      "id": "garlic-bread",
+      "categoryId": "starters",
+      "name": "לחם שום",
+      "description": "לחם שום ביתי, חם מהתנור",
+      "price": 17,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני"
+      ],
+      "options": [
+        {
+          "id": "size",
+          "name": "גודל",
+          "type": "single",
+          "required": true,
+          "choices": [
+            {
+              "id": "s",
+              "label": "קטן",
+              "priceDelta": 0
+            },
+            {
+              "id": "m",
+              "label": "בינוני",
+              "priceDelta": 10
+            },
+            {
+              "id": "l",
+              "label": "גדול",
+              "priceDelta": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "house-crostini",
+      "categoryId": "starters",
+      "name": "צנימי הבית",
+      "description": "צנימים עם זעתר בליווי גבינת שמנת וממרח פסטו",
+      "price": 30,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני"
+      ]
+    },
+    {
+      "id": "salad-tovale",
+      "categoryId": "salads",
+      "name": "סלט טובל'ה",
+      "description": "מיקס ירק טובל'ה, בולגרית, טונה, תירס, קוביות תפוח אדמה וביצה קשה בתיבול שמן זית וזעתר",
+      "price": 47,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "פופולרי"
+      ],
+      "addonGroup": "salad-extras"
+    },
+    {
+      "id": "salad-halloumi-fried",
+      "categoryId": "salads",
+      "name": "סלט חלומי מטוגן",
+      "description": "מיקס ירק טובל'ה, בולגרית, תירס וגבינת חלומי בתיבול שמן זית וזעתר",
+      "price": 47,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני"
+      ],
+      "addonGroup": "salad-extras"
+    },
+    {
+      "id": "salad-greek",
+      "categoryId": "salads",
+      "name": "סלט יווני",
+      "description": "מיקס ירק טובל'ה, בולגרית, קוביות גמבה וזיתים שחורים בתיבול שמן זית וזעתר",
+      "price": 47,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני"
+      ],
+      "addonGroup": "salad-extras"
+    },
+    {
+      "id": "salad-halloumi-stirfry",
+      "categoryId": "salads",
+      "name": "סלט חלומי מוקפץ",
+      "description": "מיקס ירק טובל'ה, גבינת חלומי, בצל סגול ופטריות טריות מוקפצים בטריאקי",
+      "price": 52,
+      "available": true,
+      "featured": true,
+      "tags": [
+        "צמחוני",
+        "פופולרי"
+      ],
+      "addonGroup": "salad-extras"
+    },
+    {
+      "id": "salad-tuna",
+      "categoryId": "salads",
+      "name": "סלט טונה",
+      "description": "מיקס ירק טובל'ה, נתחי טונה, תירס, תפוח אדמה, ביצה קשה ומלפפון חמוץ",
+      "price": 47,
+      "available": true,
+      "featured": false,
+      "tags": [],
+      "addonGroup": "salad-extras"
+    },
+    {
+      "id": "salad-crispy-batata",
+      "categoryId": "salads",
+      "name": "סלט קריספי בטטה",
+      "description": "מיקס ירק טובל'ה, ניוקי גבינות, בולגרית ובטטה קריספית",
+      "price": 53,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני"
+      ],
+      "addonGroup": "salad-extras"
+    },
+    {
+      "id": "salad-house",
+      "categoryId": "salads",
+      "name": "סלט הבית",
+      "description": "מלפפון, חסה, שרי, בולגרית, תירס, כרוב סגול וכדור גבינת שמנת",
+      "price": 30,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני"
+      ],
+      "addonGroup": "salad-extras"
+    },
+    {
+      "id": "pizza",
+      "categoryId": "pizzas",
+      "name": "פיצה טובל'ה",
+      "description": "בצק הבית, רוטב עגבניות וגבינות — בדיוק כמו שאתם אוהבים",
+      "price": 27,
+      "image": "assets/img/pizza-closeup-sm.webp",
+      "imageLg": "assets/img/pizza-closeup-lg.webp",
+      "available": true,
+      "featured": true,
+      "tags": [
+        "צמחוני",
+        "פופולרי"
+      ],
+      "options": [
+        {
+          "id": "size",
+          "name": "גודל",
+          "type": "single",
+          "required": true,
+          "choices": [
+            {
+              "id": "s",
+              "label": "S אישית",
+              "priceDelta": 0
+            },
+            {
+              "id": "m",
+              "label": "M בינונית",
+              "priceDelta": 9
+            },
+            {
+              "id": "l",
+              "label": "L משפחתית",
+              "priceDelta": 18
+            }
+          ]
+        }
+      ],
+      "addons": {
+        "name": "תוספות לפיצה",
+        "source": "toppings",
+        "priceBySize": {
+          "s": 4,
+          "m": 6,
+          "l": 6
+        }
+      }
+    },
+    {
+      "id": "focaccia-house",
+      "categoryId": "focaccias",
+      "name": "פוקצ'ת הבית",
       "description": "מוגשת בליווי מתבלי פסטו, אבוקדו וטפנד זיתים",
-      "price": 27, "image": "assets/img/zaatar-focaccia-sm.webp", "imageLg": "assets/img/zaatar-focaccia-lg.webp",
-      "available": true, "featured": false, "tags": ["צמחוני", "פופולרי"]
+      "price": 27,
+      "image": "assets/img/zaatar-focaccia-sm.webp",
+      "imageLg": "assets/img/zaatar-focaccia-lg.webp",
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני",
+        "פופולרי"
+      ]
     },
     {
-      "id": "focaccia-alfredo", "categoryId": "focaccias", "name": "פוקצ'ת אלפרדו",
+      "id": "focaccia-alfredo",
+      "categoryId": "focaccias",
+      "name": "פוקצ'ת אלפרדו",
       "description": "רוטב שמנת, פטריות ומיקס גבינות",
-      "price": 40, "available": true, "featured": true, "tags": ["צמחוני"],
+      "price": 40,
+      "available": true,
+      "featured": true,
+      "tags": [
+        "צמחוני"
+      ],
       "options": [
-        { "id": "size", "name": "גודל", "type": "single", "required": true, "choices": [
-          { "id": "s", "label": "S", "priceDelta": 0 },
-          { "id": "m", "label": "M", "priceDelta": 10 },
-          { "id": "l", "label": "L", "priceDelta": 30 }
-        ] }
+        {
+          "id": "size",
+          "name": "גודל",
+          "type": "single",
+          "required": true,
+          "choices": [
+            {
+              "id": "s",
+              "label": "S",
+              "priceDelta": 0
+            },
+            {
+              "id": "m",
+              "label": "M",
+              "priceDelta": 10
+            },
+            {
+              "id": "l",
+              "label": "L",
+              "priceDelta": 30
+            }
+          ]
+        }
       ]
     },
     {
-      "id": "focaccia-eggplant", "categoryId": "focaccias", "name": "פוקצ'ת חצילים",
+      "id": "focaccia-eggplant",
+      "categoryId": "focaccias",
+      "name": "פוקצ'ת חצילים",
       "description": "ממרח פסטו, קוביות חצילים, גמבה, בצל, קלמטה ומיקס גבינות",
-      "price": 40, "available": true, "featured": false, "tags": ["צמחוני"],
+      "price": 40,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני"
+      ],
       "options": [
-        { "id": "size", "name": "גודל", "type": "single", "required": true, "choices": [
-          { "id": "s", "label": "S", "priceDelta": 0 },
-          { "id": "m", "label": "M", "priceDelta": 10 },
-          { "id": "l", "label": "L", "priceDelta": 30 }
-        ] }
+        {
+          "id": "size",
+          "name": "גודל",
+          "type": "single",
+          "required": true,
+          "choices": [
+            {
+              "id": "s",
+              "label": "S",
+              "priceDelta": 0
+            },
+            {
+              "id": "m",
+              "label": "M",
+              "priceDelta": 10
+            },
+            {
+              "id": "l",
+              "label": "L",
+              "priceDelta": 30
+            }
+          ]
+        }
       ]
     },
     {
-      "id": "focaccia-greek", "categoryId": "focaccias", "name": "פוקצ'ה יוונית",
+      "id": "focaccia-greek",
+      "categoryId": "focaccias",
+      "name": "פוקצ'ה יוונית",
       "description": "גבינת שמנת, בולגרית, זעתר, גמבה, קלמטה ומיקס גבינות",
-      "price": 40, "available": true, "featured": false, "tags": ["צמחוני"],
+      "price": 40,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני"
+      ],
       "options": [
-        { "id": "size", "name": "גודל", "type": "single", "required": true, "choices": [
-          { "id": "s", "label": "S", "priceDelta": 0 },
-          { "id": "m", "label": "M", "priceDelta": 10 },
-          { "id": "l", "label": "L", "priceDelta": 30 }
-        ] }
+        {
+          "id": "size",
+          "name": "גודל",
+          "type": "single",
+          "required": true,
+          "choices": [
+            {
+              "id": "s",
+              "label": "S",
+              "priceDelta": 0
+            },
+            {
+              "id": "m",
+              "label": "M",
+              "priceDelta": 10
+            },
+            {
+              "id": "l",
+              "label": "L",
+              "priceDelta": 30
+            }
+          ]
+        }
       ]
     },
-
     {
-      "id": "sandwich-halloumi", "categoryId": "sandwiches", "name": "כריך חלומי",
+      "id": "sandwich-halloumi",
+      "categoryId": "sandwiches",
+      "name": "כריך חלומי",
       "description": "גבינת שמנת, קוביות חלומי מטוגנות, עגבניה, חסה ושרי",
-      "price": 52, "available": true, "featured": false, "tags": ["צמחוני"]
+      "price": 52,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני"
+      ]
     },
     {
-      "id": "sandwich-tunisian", "categoryId": "sandwiches", "name": "כריך טוניסאי",
+      "id": "sandwich-tunisian",
+      "categoryId": "sandwiches",
+      "name": "כריך טוניסאי",
       "description": "נתחי טונה, תפוח אדמה, ביצה קשה וזיתים שחורים",
-      "price": 43, "available": true, "featured": false, "tags": []
+      "price": 43,
+      "available": true,
+      "featured": false,
+      "tags": []
     },
     {
-      "id": "sandwich-israeli", "categoryId": "sandwiches", "name": "כריך ישראלי",
+      "id": "sandwich-israeli",
+      "categoryId": "sandwiches",
+      "name": "כריך ישראלי",
       "description": "גבינת שמנת, חביתה, מלפפון ושרי",
-      "price": 43, "available": true, "featured": false, "tags": ["צמחוני"]
+      "price": 43,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני"
+      ]
     },
     {
-      "id": "sandwich-tuna", "categoryId": "sandwiches", "name": "כריך טונה",
+      "id": "sandwich-tuna",
+      "categoryId": "sandwiches",
+      "name": "כריך טונה",
       "description": "נתחי טונה, מלפפון ועגבניה",
-      "price": 43, "available": true, "featured": false, "tags": []
+      "price": 43,
+      "available": true,
+      "featured": false,
+      "tags": []
     },
     {
-      "id": "sandwich-greek", "categoryId": "sandwiches", "name": "כריך יווני",
+      "id": "sandwich-greek",
+      "categoryId": "sandwiches",
+      "name": "כריך יווני",
       "description": "גבינת שמנת, בולגרית, זיתים שחורים, שרי וזעתר",
-      "price": 43, "available": true, "featured": false, "tags": ["צמחוני"]
+      "price": 43,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני"
+      ]
     },
-
     {
-      "id": "toast-bagel", "categoryId": "toasts", "name": "בייגל טוסט",
+      "id": "toast-bagel",
+      "categoryId": "toasts",
+      "name": "בייגל טוסט",
       "description": "רוטב פיצה וגבינה צהובה",
-      "price": 41, "available": true, "featured": false, "tags": ["צמחוני"],
-      "addons": { "name": "תוספות לטוסט", "source": "toast-toppings", "price": 3 }
+      "price": 41,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני"
+      ],
+      "addons": {
+        "name": "תוספות לטוסט",
+        "source": "toast-toppings",
+        "price": 3
+      }
     },
     {
-      "id": "toast-alfredo", "categoryId": "toasts", "name": "טוסט אלפרדו",
+      "id": "toast-alfredo",
+      "categoryId": "toasts",
+      "name": "טוסט אלפרדו",
       "description": "לחם איטלקי פתוח עם רוטב שמנת פטריות, גבינת מוצרלה וצהובה",
-      "price": 47, "available": true, "featured": false, "tags": ["צמחוני"]
+      "price": 47,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני"
+      ]
     },
     {
-      "id": "toast-greek", "categoryId": "toasts", "name": "טוסט יווני",
+      "id": "toast-greek",
+      "categoryId": "toasts",
+      "name": "טוסט יווני",
       "description": "לחם איטלקי פתוח עם גבינת שמנת, בולגרית, שרי וקלמטה",
-      "price": 47, "available": true, "featured": false, "tags": ["צמחוני"]
+      "price": 47,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני"
+      ]
     },
     {
-      "id": "toast-jabetta", "categoryId": "toasts", "name": "טוסט ג'בטה פתוח",
+      "id": "toast-jabetta",
+      "categoryId": "toasts",
+      "name": "טוסט ג'בטה פתוח",
       "description": "לחם איטלקי פתוח עם רוטב פיצה, גבינת מוצרלה וצהובה — 2 תוספות לבחירה מתנה",
-      "price": 49, "available": true, "featured": false, "tags": ["צמחוני"],
-      "addons": { "name": "2 תוספות מתנה", "source": "toast-toppings", "price": 0, "max": 2 }
+      "price": 49,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני"
+      ],
+      "addons": {
+        "name": "2 תוספות מתנה",
+        "source": "toast-toppings",
+        "price": 0,
+        "max": 2
+      }
     },
-
     {
-      "id": "ziva-cheeses", "categoryId": "pastries", "name": "זיווה גבינות",
+      "id": "ziva-cheeses",
+      "categoryId": "pastries",
+      "name": "זיווה גבינות",
       "description": "מאפה בצק עלים במילוי מיקס גבינות, מוגש לצד רסק עגבניות טריות, ביצה קשה וממרח שמנת",
-      "price": 40, "image": "assets/img/bourekas-closeup-sm.webp", "imageLg": "assets/img/bourekas-closeup-lg.webp",
-      "available": true, "featured": true, "tags": ["צמחוני", "פופולרי"]
+      "price": 40,
+      "image": "assets/img/bourekas-closeup-sm.webp",
+      "imageLg": "assets/img/bourekas-closeup-lg.webp",
+      "available": true,
+      "featured": true,
+      "tags": [
+        "צמחוני",
+        "פופולרי"
+      ]
     },
     {
-      "id": "malawach", "categoryId": "pastries", "name": "מלוואח",
+      "id": "malawach",
+      "categoryId": "pastries",
+      "name": "מלוואח",
       "description": "מוגש עם ביצה קשה ועגבניות מגורדות",
-      "price": 27, "available": true, "featured": false, "tags": ["צמחוני"]
+      "price": 27,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני"
+      ]
     },
-
     {
-      "id": "pasta-spaghetti-penne", "categoryId": "pastas", "name": "ספגטי / פנה",
+      "id": "pasta-spaghetti-penne",
+      "categoryId": "pastas",
+      "name": "ספגטי / פנה",
       "description": "פסטה ברוטב לבחירתכם",
-      "price": 45, "image": "assets/img/pasta-cream-pots-sm.webp", "imageLg": "assets/img/pasta-cream-pots-lg.webp",
-      "available": true, "featured": false, "tags": ["צמחוני"],
+      "price": 45,
+      "image": "assets/img/pasta-cream-pots-sm.webp",
+      "imageLg": "assets/img/pasta-cream-pots-lg.webp",
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני"
+      ],
       "options": [
-        { "id": "shape", "name": "סוג הפסטה", "type": "single", "required": true, "choices": [
-          { "id": "spaghetti", "label": "ספגטי", "priceDelta": 0 },
-          { "id": "penne", "label": "פנה", "priceDelta": 0 }
-        ] },
-        { "id": "sauce", "name": "הרוטב שלכם", "type": "single", "required": true, "choices": [
-          { "id": "alfredo", "label": "אלפרדו", "priceDelta": 0 },
-          { "id": "tomatoes", "label": "עגבניות", "priceDelta": 0 },
-          { "id": "rosa", "label": "רוזה", "priceDelta": 0 },
-          { "id": "hakrema", "label": "הקרמה", "priceDelta": 0 }
-        ] }
+        {
+          "id": "shape",
+          "name": "סוג הפסטה",
+          "type": "single",
+          "required": true,
+          "choices": [
+            {
+              "id": "spaghetti",
+              "label": "ספגטי",
+              "priceDelta": 0
+            },
+            {
+              "id": "penne",
+              "label": "פנה",
+              "priceDelta": 0
+            }
+          ]
+        },
+        {
+          "id": "sauce",
+          "name": "הרוטב שלכם",
+          "type": "single",
+          "required": true,
+          "choices": [
+            {
+              "id": "alfredo",
+              "label": "אלפרדו",
+              "priceDelta": 0
+            },
+            {
+              "id": "tomatoes",
+              "label": "עגבניות",
+              "priceDelta": 0
+            },
+            {
+              "id": "rosa",
+              "label": "רוזה",
+              "priceDelta": 0
+            },
+            {
+              "id": "hakrema",
+              "label": "הקרמה",
+              "priceDelta": 0
+            }
+          ]
+        }
       ]
     },
     {
-      "id": "ravioli-cheese", "categoryId": "pastas", "name": "רביולי גבינה",
+      "id": "ravioli-cheese",
+      "categoryId": "pastas",
+      "name": "רביולי גבינה",
       "description": "רביולי במילוי גבינות ברוטב לבחירתכם",
-      "price": 55, "available": true, "featured": false, "tags": ["צמחוני"],
+      "price": 55,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני"
+      ],
       "options": [
-        { "id": "sauce", "name": "הרוטב שלכם", "type": "single", "required": true, "choices": [
-          { "id": "alfredo", "label": "אלפרדו", "priceDelta": 0 },
-          { "id": "tomatoes", "label": "עגבניות", "priceDelta": 0 },
-          { "id": "rosa", "label": "רוזה", "priceDelta": 0 },
-          { "id": "hakrema", "label": "הקרמה", "priceDelta": 0 }
-        ] }
+        {
+          "id": "sauce",
+          "name": "הרוטב שלכם",
+          "type": "single",
+          "required": true,
+          "choices": [
+            {
+              "id": "alfredo",
+              "label": "אלפרדו",
+              "priceDelta": 0
+            },
+            {
+              "id": "tomatoes",
+              "label": "עגבניות",
+              "priceDelta": 0
+            },
+            {
+              "id": "rosa",
+              "label": "רוזה",
+              "priceDelta": 0
+            },
+            {
+              "id": "hakrema",
+              "label": "הקרמה",
+              "priceDelta": 0
+            }
+          ]
+        }
       ]
     },
     {
-      "id": "ravioli-batata", "categoryId": "pastas", "name": "רביולי בטטה",
+      "id": "ravioli-batata",
+      "categoryId": "pastas",
+      "name": "רביולי בטטה",
       "description": "רביולי במילוי בטטה ברוטב לבחירתכם",
-      "price": 55, "available": true, "featured": false, "tags": ["צמחוני"],
+      "price": 55,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני"
+      ],
       "options": [
-        { "id": "sauce", "name": "הרוטב שלכם", "type": "single", "required": true, "choices": [
-          { "id": "alfredo", "label": "אלפרדו", "priceDelta": 0 },
-          { "id": "tomatoes", "label": "עגבניות", "priceDelta": 0 },
-          { "id": "rosa", "label": "רוזה", "priceDelta": 0 },
-          { "id": "hakrema", "label": "הקרמה", "priceDelta": 0 }
-        ] }
+        {
+          "id": "sauce",
+          "name": "הרוטב שלכם",
+          "type": "single",
+          "required": true,
+          "choices": [
+            {
+              "id": "alfredo",
+              "label": "אלפרדו",
+              "priceDelta": 0
+            },
+            {
+              "id": "tomatoes",
+              "label": "עגבניות",
+              "priceDelta": 0
+            },
+            {
+              "id": "rosa",
+              "label": "רוזה",
+              "priceDelta": 0
+            },
+            {
+              "id": "hakrema",
+              "label": "הקרמה",
+              "priceDelta": 0
+            }
+          ]
+        }
       ]
     },
     {
-      "id": "gnocchi-potato", "categoryId": "pastas", "name": "ניוקי תפוח אדמה",
+      "id": "gnocchi-potato",
+      "categoryId": "pastas",
+      "name": "ניוקי תפוח אדמה",
       "description": "ניוקי תפוח אדמה ברוטב לבחירתכם",
-      "price": 50, "available": true, "featured": false, "tags": ["צמחוני"],
+      "price": 50,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני"
+      ],
       "options": [
-        { "id": "sauce", "name": "הרוטב שלכם", "type": "single", "required": true, "choices": [
-          { "id": "alfredo", "label": "אלפרדו", "priceDelta": 0 },
-          { "id": "tomatoes", "label": "עגבניות", "priceDelta": 0 },
-          { "id": "rosa", "label": "רוזה", "priceDelta": 0 },
-          { "id": "hakrema", "label": "הקרמה", "priceDelta": 0 }
-        ] }
+        {
+          "id": "sauce",
+          "name": "הרוטב שלכם",
+          "type": "single",
+          "required": true,
+          "choices": [
+            {
+              "id": "alfredo",
+              "label": "אלפרדו",
+              "priceDelta": 0
+            },
+            {
+              "id": "tomatoes",
+              "label": "עגבניות",
+              "priceDelta": 0
+            },
+            {
+              "id": "rosa",
+              "label": "רוזה",
+              "priceDelta": 0
+            },
+            {
+              "id": "hakrema",
+              "label": "הקרמה",
+              "priceDelta": 0
+            }
+          ]
+        }
       ]
     },
     {
-      "id": "gnocchi-cheese", "categoryId": "pastas", "name": "ניוקי גבינות",
+      "id": "gnocchi-cheese",
+      "categoryId": "pastas",
+      "name": "ניוקי גבינות",
       "description": "ניוקי במילוי גבינות ברוטב לבחירתכם",
-      "price": 55, "available": true, "featured": true, "tags": ["צמחוני", "פופולרי"],
+      "price": 55,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני",
+        "פופולרי"
+      ],
       "options": [
-        { "id": "sauce", "name": "הרוטב שלכם", "type": "single", "required": true, "choices": [
-          { "id": "alfredo", "label": "אלפרדו", "priceDelta": 0 },
-          { "id": "tomatoes", "label": "עגבניות", "priceDelta": 0 },
-          { "id": "rosa", "label": "רוזה", "priceDelta": 0 },
-          { "id": "hakrema", "label": "הקרמה", "priceDelta": 0 }
-        ] }
+        {
+          "id": "sauce",
+          "name": "הרוטב שלכם",
+          "type": "single",
+          "required": true,
+          "choices": [
+            {
+              "id": "alfredo",
+              "label": "אלפרדו",
+              "priceDelta": 0
+            },
+            {
+              "id": "tomatoes",
+              "label": "עגבניות",
+              "priceDelta": 0
+            },
+            {
+              "id": "rosa",
+              "label": "רוזה",
+              "priceDelta": 0
+            },
+            {
+              "id": "hakrema",
+              "label": "הקרמה",
+              "priceDelta": 0
+            }
+          ]
+        }
       ]
     },
     {
-      "id": "pasta-veg-stirfry", "categoryId": "pastas", "name": "מוקפץ ירקות",
+      "id": "pasta-veg-stirfry",
+      "categoryId": "pastas",
+      "name": "מוקפץ ירקות",
       "description": "פסטה בשילוב לקט ירקות ברוטב טריאקי וצ'ילי מתוק",
-      "price": 50, "image": "assets/img/pasta-stirfry-sm.webp", "imageLg": "assets/img/pasta-stirfry-lg.webp",
-      "available": true, "featured": true, "tags": ["צמחוני"]
+      "price": 50,
+      "image": "assets/img/pasta-stirfry-sm.webp",
+      "imageLg": "assets/img/pasta-stirfry-lg.webp",
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני"
+      ]
     },
-
     {
-      "id": "gf-pizza", "categoryId": "gluten-free", "name": "פיצה אישית ללא גלוטן",
+      "id": "gf-pizza",
+      "categoryId": "gluten-free",
+      "name": "פיצה אישית ללא גלוטן",
       "description": "פיצה אישית מבצק ללא גלוטן + תוספת לבחירה",
-      "price": 35, "available": true, "featured": false, "tags": ["צמחוני", "ללא גלוטן"],
-      "addons": { "name": "תוספת לבחירה (כלולה)", "source": "toppings", "price": 0, "max": 1 }
+      "price": 35,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני",
+        "ללא גלוטן"
+      ],
+      "addons": {
+        "name": "תוספת לבחירה (כלולה)",
+        "source": "toppings",
+        "price": 0,
+        "max": 1
+      }
     },
     {
-      "id": "gf-toast", "categoryId": "gluten-free", "name": "טוסט פתוח ללא גלוטן",
+      "id": "gf-toast",
+      "categoryId": "gluten-free",
+      "name": "טוסט פתוח ללא גלוטן",
       "description": "רוטב פיצה וגבינה צהובה עם 1-2 תוספות לבחירה, מוגש בליווי סלט ישראלי ירוק, קוביית בולגרית, תירס, גבינת שמנת וכרוב",
-      "price": 49, "available": true, "featured": false, "tags": ["צמחוני", "ללא גלוטן"],
-      "addons": { "name": "עד 2 תוספות (כלולות)", "source": "toast-toppings", "price": 0, "max": 2 }
+      "price": 49,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני",
+        "ללא גלוטן"
+      ],
+      "addons": {
+        "name": "עד 2 תוספות (כלולות)",
+        "source": "toast-toppings",
+        "price": 0,
+        "max": 2
+      }
     },
-
     {
-      "id": "chocolate-souffle", "categoryId": "desserts", "name": "סופלה שוקולד",
+      "id": "chocolate-souffle",
+      "categoryId": "desserts",
+      "name": "סופלה שוקולד",
       "description": "סופלה שוקולד חם, מוגש לצד קצפת וגלידת וניל",
-      "price": 38, "available": true, "featured": true, "tags": ["צמחוני", "פופולרי"]
+      "price": 38,
+      "available": true,
+      "featured": true,
+      "tags": [
+        "צמחוני",
+        "פופולרי"
+      ]
     },
     {
-      "id": "cheesecake-crumbs", "categoryId": "desserts", "name": "עוגת גבינה פירורים",
+      "id": "cheesecake-crumbs",
+      "categoryId": "desserts",
+      "name": "עוגת גבינה פירורים",
       "description": "עוגת גבינה קרמית עם פירורים, מוגשת לצד קצפת וגלידת וניל",
-      "price": 38, "available": true, "featured": false, "tags": ["צמחוני"]
+      "price": 38,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני"
+      ]
     },
     {
-      "id": "nutella-pie", "categoryId": "desserts", "name": "פאי נוטלה",
+      "id": "nutella-pie",
+      "categoryId": "desserts",
+      "name": "פאי נוטלה",
       "description": "פאי נוטלה עשיר, מוגש לצד קצפת וגלידת וניל",
-      "price": 38, "available": true, "featured": false, "tags": ["צמחוני"]
-    },
-
-    {
-      "id": "drink-bottle", "categoryId": "drinks", "name": "בקבוק / זכוכית", "description": "",
-      "price": 11, "available": true, "featured": false, "tags": []
-    },
-    {
-      "id": "drink-can", "categoryId": "drinks", "name": "פחית / מים / סודה", "description": "",
-      "price": 8, "available": true, "featured": false, "tags": []
+      "price": 38,
+      "available": true,
+      "featured": false,
+      "tags": [
+        "צמחוני"
+      ]
     },
     {
-      "id": "drink-beer", "categoryId": "drinks", "name": "בירה", "description": "",
-      "price": 16, "available": true, "featured": false, "tags": []
+      "id": "drink-bottle",
+      "categoryId": "drinks",
+      "name": "בקבוק / זכוכית",
+      "description": "",
+      "price": 11,
+      "available": true,
+      "featured": false,
+      "tags": []
     },
     {
-      "id": "drink-large", "categoryId": "drinks", "name": "שתייה גדולה", "description": "",
-      "price": 15, "available": true, "featured": false, "tags": []
+      "id": "drink-can",
+      "categoryId": "drinks",
+      "name": "פחית / מים / סודה",
+      "description": "",
+      "price": 8,
+      "available": true,
+      "featured": false,
+      "tags": []
+    },
+    {
+      "id": "drink-beer",
+      "categoryId": "drinks",
+      "name": "בירה",
+      "description": "",
+      "price": 16,
+      "available": true,
+      "featured": false,
+      "tags": []
+    },
+    {
+      "id": "drink-large",
+      "categoryId": "drinks",
+      "name": "שתייה גדולה",
+      "description": "",
+      "price": 15,
+      "available": true,
+      "featured": false,
+      "tags": []
     }
   ],
-  "toastToppings": ["זיתים ירוקים", "זיתי קלמטה", "פטריות טריות", "תירס", "בצל", "טונה", "ביצה", "עגבניות שרי", "בולגרית", "אנשובי", "גמבה"],
+  "toastToppings": [
+    "זיתים ירוקים",
+    "זיתי קלמטה",
+    "פטריות טריות",
+    "תירס",
+    "בצל",
+    "טונה",
+    "ביצה",
+    "עגבניות שרי",
+    "בולגרית",
+    "אנשובי",
+    "גמבה"
+  ],
   "addonGroups": {
-    "salad-extras": { "name": "תוספות לסלט", "items": [
-      { "label": "תוספת גבינת חלומי", "price": 25 },
-      { "label": "תוספת גבינת שמנת", "price": 8 },
-      { "label": "תוספת ג'בטת הבית", "price": 8 }
-    ] }
+    "salad-extras": {
+      "name": "תוספות לסלט",
+      "items": [
+        {
+          "label": "תוספת גבינת חלומי",
+          "price": 25
+        },
+        {
+          "label": "תוספת גבינת שמנת",
+          "price": 8
+        },
+        {
+          "label": "תוספת ג'בטת הבית",
+          "price": 8
+        }
+      ]
+    }
   }
 }
