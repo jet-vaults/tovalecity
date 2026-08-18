@@ -35,7 +35,7 @@
   header.innerHTML = `
     <div class="header-inner">
       <a class="brand" href="/" aria-label="טובל'ה בעיר — לעמוד הבית">
-        <img src="/assets/img/logo-white.png" alt="טובל'ה בעיר">
+        <img src="/assets/img/logo-green.png" alt="טובל'ה בעיר">
       </a>
       <nav class="main-nav" id="main-nav" aria-label="ניווט ראשי">
         ${NAV.map(n => `<a href="${n.href}" ${n.id === page ? 'aria-current="page"' : ""}>${n.label}</a>`).join("")}
