@@ -773,10 +773,50 @@ html.a11y-motion .splash { display: none !important; }
   .cta-more .btn { width: 100%; }
 }
 
-/* event-type grid: 3 + 3 */
+/* event-type grid: 3 + 3, green tiles */
 .event-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
 @media (max-width: 900px) { .event-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 520px) { .event-grid { grid-template-columns: 1fr; } }
+.event-tile {
+  background: var(--green-900); color: #fff; border-radius: 5px;
+  text-align: center; padding: 1.9rem 1rem;
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+.event-tile:hover { transform: translateY(-3px); background: var(--green-800); }
+.event-tile svg { width: 34px; height: 34px; color: var(--green-300); margin-bottom: 0.7rem; }
+.event-tile span { display: block; font-weight: 600; font-size: 1.15rem; }
+
+/* steps timeline with draw effect */
+.steps-tl { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; position: relative; }
+.steps-tl::before {
+  content: ''; position: absolute; top: 23px; inset-inline: 12%; height: 3px;
+  background: var(--green-300); border-radius: 2px;
+  transform: scaleX(0); transform-origin: 100% 50%; /* RTL: draws from the first step */
+}
+.steps-tl.in::before { animation: tl-draw 1.2s ease 0.2s forwards; }
+@keyframes tl-draw { to { transform: scaleX(1); } }
+.steps-tl > div { text-align: center; position: relative; }
+.steps-tl .dot {
+  width: 48px; height: 48px; border-radius: 50%; background: var(--green-900); color: #fff;
+  font-weight: 700; font-size: 1.2rem; display: inline-flex; align-items: center; justify-content: center;
+  position: relative; z-index: 2; margin-bottom: 0.8rem; transform: scale(0);
+}
+.steps-tl.in .dot { animation: tl-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+.steps-tl > div:nth-child(1) .dot { animation-delay: 0.2s; }
+.steps-tl > div:nth-child(2) .dot { animation-delay: 0.55s; }
+.steps-tl > div:nth-child(3) .dot { animation-delay: 0.9s; }
+.steps-tl > div:nth-child(4) .dot { animation-delay: 1.25s; }
+@keyframes tl-pop { to { transform: scale(1); } }
+.steps-tl h3 { font-size: 1.12rem; margin-bottom: 0.3rem; }
+.steps-tl p { color: var(--ink-soft); font-size: 0.95rem; }
+@media (max-width: 860px) {
+  .steps-tl { grid-template-columns: 1fr 1fr; gap: 1.6rem 1rem; }
+  .steps-tl::before { display: none; }
+}
+html.a11y-motion .steps-tl .dot, html.a11y-motion .steps-tl::before { transform: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  .steps-tl .dot, .steps-tl::before { transform: none !important; }
+}
 
 /* ============ gallery lightbox ============ */
 .lightbox {
