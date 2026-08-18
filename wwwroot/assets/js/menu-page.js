@@ -41,7 +41,7 @@
   /* filter chips: only tags that actually exist */
   const presentTags = [...new Set(menu.items.flatMap(i => i.tags || []))];
   const FILTERS = ["צמחוני", "ללא גלוטן", "חריף", "פופולרי"].filter(t => presentTags.includes(t));
-  filterWrap.innerHTML = FILTERS.map(t => `<button class="filter-chip" data-filter="${t}">${t}</button>`).join("");
+  if (filterWrap) filterWrap.innerHTML = FILTERS.map(t => `<button class="filter-chip" data-filter="${t}">${t}</button>`).join("");
 
   let activeFilters = new Set();
   let query = "";
@@ -76,13 +76,13 @@
         <p>נסו חיפוש אחר או נקו את הסינון</p></div>`;
     }
 
-    catNav.innerHTML = menu.categories
+    if (catNav) catNav.innerHTML = menu.categories
       .filter(c => catIds.includes(c.id))
       .map(c => `<button data-goto="${c.id}">${esc(c.nav || c.name)}</button>`).join("");
     observeSections();
   }
 
-  catNav.addEventListener("click", e => {
+  if (catNav) catNav.addEventListener("click", e => {
     const b = e.target.closest("[data-goto]");
     if (!b) return;
     document.getElementById("cat-" + b.dataset.goto)?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -91,6 +91,7 @@
   /* active category highlighting while scrolling */
   let catObserver = null;
   function observeSections() {
+    if (!catNav) return;
     if (catObserver) catObserver.disconnect();
     if (!("IntersectionObserver" in window)) return;
     catObserver = new IntersectionObserver(entries => {
@@ -106,12 +107,12 @@
   }
 
   let debounce;
-  searchInput.addEventListener("input", () => {
+  if (searchInput) searchInput.addEventListener("input", () => {
     clearTimeout(debounce);
     debounce = setTimeout(() => { query = searchInput.value.trim().toLowerCase(); render(); }, 180);
   });
 
-  filterWrap.addEventListener("click", e => {
+  if (filterWrap) filterWrap.addEventListener("click", e => {
     const chip = e.target.closest("[data-filter]");
     if (!chip) return;
     const f = chip.dataset.filter;
