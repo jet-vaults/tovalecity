@@ -92,7 +92,7 @@
         ${item.description ? `<p class="sheet-desc">${esc(item.description)}</p>` : ""}
         ${opts.map(o => `
           <fieldset class="opt-group" data-opt="${o.id}">
-            <h3><legend style="float:right">${esc(o.name)}</legend> ${o.required ? '<span class="req">חובה</span>' : ""}</h3>
+            <legend>${esc(o.name)}${o.required ? ' <span class="req">חובה</span>' : ""}</legend>
             <div class="choice-list">
               ${o.choices.map((c, i) => `
                 <label class="choice${o.required && i === 0 ? " checked" : ""}">
@@ -104,7 +104,7 @@
           </fieldset>`).join("")}
         ${addons ? `
           <fieldset class="opt-group" data-addons>
-            <h3><legend style="float:right">${esc(addons.name)}</legend> ${addons.max ? `<span class="req">עד ${addons.max}</span>` : ""}</h3>
+            <legend>${esc(addons.name)}${addons.max ? ` <span class="req">עד ${addons.max}</span>` : ""}</legend>
             <div class="choice-list">
               ${addons.items.map((a, i) => `
                 <label class="choice">
