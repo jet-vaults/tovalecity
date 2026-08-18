@@ -389,11 +389,15 @@ h1, h2, h3, .display { font-family: var(--font-display); font-weight: 800; line-
 @media (max-width: 560px) { .cat-launcher button svg { width: 50px; height: 50px; } .cat-launcher button { font-size: 0.88rem; } }
 
 .menu-toolbar {
-  position: sticky; top: var(--header-h); z-index: 90;
-  background: rgba(247, 243, 236, 0.94); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  /* hidden until the user scrolls past the launcher, then fixed under the header */
+  position: fixed; top: var(--header-h); inset-inline: 0; z-index: 90;
+  background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--beige);
   padding-block: 0.6rem;
+  opacity: 0; transform: translateY(-12px); pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
+.menu-toolbar.show { opacity: 1; transform: none; pointer-events: auto; }
 .cat-nav {
   display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; padding-block: 2px;
 }

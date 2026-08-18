@@ -104,6 +104,22 @@
     sections.querySelectorAll(".menu-cat").forEach(s => catObserver.observe(s));
   }
 
+  /* category bar appears only after scrolling past the icon launcher */
+  const toolbar = document.querySelector(".menu-toolbar");
+  const launcherWrap = document.querySelector(".cat-launcher-wrap");
+  if (toolbar && launcherWrap) {
+    const headerH = 72;
+    let ticking = false;
+    const updateBar = () => {
+      ticking = false;
+      toolbar.classList.toggle("show", launcherWrap.getBoundingClientRect().bottom < headerH);
+    };
+    window.addEventListener("scroll", () => {
+      if (!ticking) { ticking = true; requestAnimationFrame(updateBar); }
+    }, { passive: true });
+    updateBar();
+  }
+
   let debounce;
   if (searchInput) searchInput.addEventListener("input", () => {
     clearTimeout(debounce);
