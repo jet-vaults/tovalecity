@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /order
+Disallow: /order-received
+
+Sitemap: https://tovalecity.co.il/sitemap.xml

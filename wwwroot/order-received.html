@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>קיבלנו את ההזמנה — טובל'ה בעיר</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Frank+Ruhl+Libre:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script defer src="/assets/js/config.js"></script>
+  <script defer src="/assets/js/cart.js"></script>
+  <script defer src="/assets/js/ui.js"></script>
+</head>
+<body data-page="order">
+<main id="main">
+  <section class="received-wrap container">
+    <h1 class="big">קיבלנו את ההזמנה 🎉</h1>
+    <p style="font-size:1.15rem">בקשת ההזמנה שלכם התקבלה. צוות טובל'ה יצור איתכם קשר לאישור סופי.</p>
+    <div class="order-no" data-order-no>מספר בקשה: —</div>
+    <p style="color:var(--ink-soft)" data-email-status></p>
+    <p style="color:var(--ink-soft);font-size:.95rem;max-width:32rem;margin-inline:auto">
+      רוצים לזרז? שלחו לנו את ההזמנה גם בוואטסאפ בלחיצה אחת — כך היא מגיעה ישירות לנייד של הצוות.
+    </p>
+    <div class="received-actions">
+      <a class="btn btn-whatsapp" data-wa-send href="#" target="_blank" rel="noopener">שליחת ההזמנה בוואטסאפ</a>
+      <a class="btn btn-outline" href="tel:086611880">התקשרו אלינו</a>
+      <a class="btn btn-primary" href="/menu">חזרה לתפריט</a>
+    </div>
+  </section>
+</main>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    let order = null;
+    try { order = JSON.parse(sessionStorage.getItem("tovale_last_order") || "null"); } catch {}
+    const noEl = document.querySelector("[data-order-no]");
+    const waBtn = document.querySelector("[data-wa-send]");
+    const statusEl = document.querySelector("[data-email-status]");
+    if (order) {
+      noEl.textContent = "מספר בקשה: " + order.orderNo;
+      waBtn.href = "https://wa.me/" + window.TOVALE.whatsapp + "?text=" + encodeURIComponent(order.text);
+      statusEl.textContent = order.emailOk
+        ? "ההזמנה נשלחה למסעדה במייל ✓"
+        : "לחצו על כפתור הוואטסאפ כדי להעביר את ההזמנה לצוות — זה שלב חשוב!";
+      if (!order.emailOk) statusEl.style.fontWeight = "700";
+    } else {
+      noEl.style.display = "none";
+      waBtn.style.display = "none";
+      statusEl.textContent = "";
+    }
+  });
+</script>
+</body>
+</html>

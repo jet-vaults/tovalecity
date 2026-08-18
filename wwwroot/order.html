@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>סיכום ההזמנה — טובל'ה בעיר</title>
+  <meta name="description" content="סיכום ההזמנה שלכם מטובל'ה בעיר — בחירת איסוף או משלוח ושליחת ההזמנה לאישור. לא מתבצע חיוב באתר.">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://tovalecity.co.il/order">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Frank+Ruhl+Libre:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script defer src="/assets/js/config.js"></script>
+  <script defer src="/assets/js/cart.js"></script>
+  <script defer src="/assets/js/ui.js"></script>
+  <script defer src="/assets/js/order.js"></script>
+</head>
+<body data-page="order">
+<main id="main">
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">כמעט שם</span>
+        <h1 style="font-size:var(--fs-h1)">סיכום ההזמנה</h1>
+      </div>
+
+      <div data-order-empty style="display:none" class="menu-empty">
+        <p class="display">ההזמנה עדיין ריקה</p>
+        <p style="margin-bottom:1.2rem">בואו נמצא לכם משהו טעים</p>
+        <a class="btn btn-primary" href="/menu">לתפריט ›</a>
+      </div>
+
+      <div class="order-layout" data-order-layout>
+        <div>
+          <form class="order-form" data-order-form novalidate>
+            <div class="field">
+              <label style="font-size:1.15rem;font-family:var(--font-display)">איך תרצו לקבל את ההזמנה?</label>
+              <div class="fulfill-toggle" role="radiogroup" aria-label="אופן קבלת ההזמנה">
+                <label class="choice checked">
+                  <input type="radio" name="fulfill" value="pickup" checked>
+                  <span>🛍 איסוף עצמי</span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="fulfill" value="delivery">
+                  <span>🛵 משלוח</span>
+                </label>
+              </div>
+            </div>
+
+            <div data-delivery-fields style="display:none">
+              <div class="field">
+                <label for="f-address">כתובת למשלוח</label>
+                <input id="f-address" name="address" type="text" autocomplete="street-address" data-req="1" placeholder="רחוב ומספר בית">
+                <p class="err">נא למלא כתובת למשלוח</p>
+              </div>
+              <div class="field" style="margin-top:.9rem">
+                <label for="f-city">עיר</label>
+                <input id="f-city" name="city" type="text" autocomplete="address-level2" value="שדרות">
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="f-name">שם מלא *</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required>
+                <p class="err">נא למלא שם מלא</p>
+              </div>
+              <div class="field">
+                <label for="f-phone">טלפון *</label>
+                <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="050-0000000">
+                <p class="err">נא למלא מספר טלפון תקין</p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="f-email">אימייל (לא חובה)</label>
+              <input id="f-email" name="email" type="email" autocomplete="email">
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="f-date">תאריך רצוי</label>
+                <input id="f-date" name="date" type="date">
+              </div>
+              <div class="field">
+                <label for="f-time">שעה רצויה</label>
+                <input id="f-time" name="time" type="time" min="08:00" max="23:00">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="f-notes">הערות כלליות</label>
+              <textarea id="f-notes" name="notes" placeholder="אלרגיות, בקשות מיוחדות, כל דבר שחשוב שנדע..."></textarea>
+            </div>
+
+            <div class="no-charge-note">
+              <span aria-hidden="true">ℹ️</span>
+              <span>לא מתבצע חיוב באתר. ההזמנה תאושר מול צוות טובל'ה — נחזור אליכם טלפונית לאישור סופי.</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="font-size:1.15rem;padding-block:16px">שליחת הזמנה לאישור</button>
+          </form>
+        </div>
+
+        <aside class="order-summary" data-order-summary aria-label="סיכום ההזמנה"></aside>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
