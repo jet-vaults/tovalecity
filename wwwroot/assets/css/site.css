@@ -762,7 +762,7 @@ html.a11y-motion .splash { display: none !important; }
 }
 
 /* section CTA aligned to the left */
-.cta-more { margin-top: 2.6rem; text-align: center; }
+.cta-more { margin-top: 4.5rem; text-align: center; }
 @media (max-width: 600px) {
   .cta-more .btn { width: 100%; }
 }
