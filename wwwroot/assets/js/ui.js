@@ -241,6 +241,53 @@
   document.addEventListener("cart:change", () => { sync(); });
   sync();
 
+  /* ---------- gallery lightbox ---------- */
+  const galleries = document.querySelectorAll(".gallery");
+  if (galleries.length) {
+    const lb = document.createElement("div");
+    lb.className = "lightbox";
+    lb.setAttribute("role", "dialog");
+    lb.setAttribute("aria-label", "גלריית תמונות");
+    lb.innerHTML = `
+      <button class="lb-close" aria-label="סגירה">✕</button>
+      <button class="lb-prev" aria-label="התמונה הקודמת">›</button>
+      <img alt="">
+      <button class="lb-next" aria-label="התמונה הבאה">‹</button>
+      <span class="lb-count"></span>`;
+    document.body.appendChild(lb);
+    const lbImg = lb.querySelector("img");
+    const lbCount = lb.querySelector(".lb-count");
+    let lbList = [], lbIdx = 0;
+    const lbShow = i => {
+      lbIdx = (i + lbList.length) % lbList.length;
+      lbImg.src = lbList[lbIdx].src;
+      lbImg.alt = lbList[lbIdx].alt || "";
+      lbCount.textContent = `${lbIdx + 1} / ${lbList.length}`;
+    };
+    const lbClose = () => { lb.classList.remove("open"); document.body.classList.remove("no-scroll"); };
+    galleries.forEach(g => g.addEventListener("click", e => {
+      const a = e.target.closest("a");
+      if (!a || !g.contains(a)) return;
+      e.preventDefault();
+      const anchors = [...g.querySelectorAll("a")];
+      lbList = anchors.map(x => { const im = x.querySelector("img"); return { src: im.src, alt: im.alt }; });
+      lbShow(anchors.indexOf(a));
+      lb.classList.add("open");
+      document.body.classList.add("no-scroll");
+    }));
+    lb.addEventListener("click", e => {
+      if (e.target.closest(".lb-prev")) { lbShow(lbIdx - 1); return; }
+      if (e.target.closest(".lb-next")) { lbShow(lbIdx + 1); return; }
+      if (e.target.closest(".lb-close") || e.target === lb) lbClose();
+    });
+    document.addEventListener("keydown", e => {
+      if (!lb.classList.contains("open")) return;
+      if (e.key === "Escape") lbClose();
+      if (e.key === "ArrowLeft") lbShow(lbIdx + 1);
+      if (e.key === "ArrowRight") lbShow(lbIdx - 1);
+    });
+  }
+
   /* ---------- reveal on scroll ---------- */
   const io = "IntersectionObserver" in window
     ? new IntersectionObserver(entries => {
