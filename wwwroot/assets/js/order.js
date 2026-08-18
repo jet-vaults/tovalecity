@@ -1,4 +1,4 @@
-/* Toval'e City — /order page: summary, details form, submission (email via Web3Forms + WhatsApp) */
+/* Toval'e City - /order page: summary, details form, submission (email via Web3Forms + WhatsApp) */
 (function () {
   const C = window.TOVALE;
   const NIS = window.tovaleNIS, esc = window.tovaleEsc;
@@ -62,17 +62,17 @@
 
   function buildOrderText(data, snap, orderNo) {
     const L = [];
-    L.push(`הזמנה חדשה מהאתר — טובל'ה בעיר`);
+    L.push(`הזמנה חדשה מהאתר - טובל'ה בעיר`);
     L.push(`מספר בקשה: ${orderNo}`);
     L.push(``);
     snap.lines.forEach(l => {
-      L.push(`▪ ${l.qty} × ${l.name} — ${NIS(l.unitPrice * l.qty)}`);
+      L.push(`▪ ${l.qty} × ${l.name} - ${NIS(l.unitPrice * l.qty)}`);
       (l.options || []).forEach(o => L.push(`   ${o.label}`));
       (l.addons || []).forEach(a => L.push(`   + ${a.label}${a.price ? ` (+${NIS(a.price)})` : ""}`));
       if (l.note) L.push(`   הערה: ${l.note}`);
     });
     L.push(``);
-    L.push(`סה"כ: ${NIS(snap.total)} (לתשלום במסעדה — לא בוצע חיוב באתר)`);
+    L.push(`סה"כ: ${NIS(snap.total)} (לתשלום במסעדה - לא בוצע חיוב באתר)`);
     L.push(``);
     L.push(`פרטי הלקוח/ה:`);
     L.push(`שם: ${data.name}`);
@@ -127,7 +127,7 @@
           headers: { "Content-Type": "application/json", Accept: "application/json" },
           body: JSON.stringify({
             access_key: C.web3formsKey,
-            subject: `הזמנה חדשה ${orderNo} — ${data.name}`,
+            subject: `הזמנה חדשה ${orderNo} - ${data.name}`,
             from_name: "אתר טובל'ה בעיר",
             message: text,
             replyto: data.email || undefined

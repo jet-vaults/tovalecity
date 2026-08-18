@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>צור קשר — טובל'ה בעיר</title>
-  <meta name="description" content="יצירת קשר עם טובל'ה בעיר — בן יהודה 23 שדרות. טלפונים, וואטסאפ, שעות פתיחה, ניווט ותעודת כשרות.">
+  <title>צור קשר - טובל'ה בעיר</title>
+  <meta name="description" content="יצירת קשר עם טובל'ה בעיר - בן יהודה 23 שדרות. טלפונים, וואטסאפ, שעות פתיחה, ניווט ותעודת כשרות.">
   <link rel="canonical" href="https://tovalecity.co.il/contact">
-  <meta property="og:title" content="צור קשר — טובל'ה בעיר">
+  <meta property="og:title" content="צור קשר - טובל'ה בעיר">
   <meta property="og:description" content="בן יהודה 23, שדרות · 08-661-1880 · וואטסאפ זמין">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tovalecity.co.il/contact">
@@ -93,7 +93,7 @@
         <iframe
           src="https://www.google.com/maps?q=%D7%91%D7%9F%20%D7%99%D7%94%D7%95%D7%93%D7%94%2023%20%D7%A9%D7%93%D7%A8%D7%95%D7%AA&output=embed"
           style="width:100%;height:100%;border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          title="מפה — טובל'ה בעיר, בן יהודה 23 שדרות" allowfullscreen></iframe>
+          title="מפה - טובל'ה בעיר, בן יהודה 23 שדרות" allowfullscreen></iframe>
       </div>
     </div>
   </section>
@@ -143,7 +143,7 @@
       });
       if (!valid) return;
       const d = Object.fromEntries(new FormData(form).entries());
-      const text = ["פנייה חדשה מהאתר — טובל'ה בעיר", "", "שם: " + d.name, "טלפון: " + d.phone, "הודעה: " + d.message].join("\n");
+      const text = ["פנייה חדשה מהאתר - טובל'ה בעיר", "", "שם: " + d.name, "טלפון: " + d.phone, "הודעה: " + d.message].join("\n");
       const status = form.querySelector("[data-ctform-status]");
       let sent = false;
       if (window.TOVALE.web3formsKey) {
@@ -153,7 +153,7 @@
             headers: { "Content-Type": "application/json", Accept: "application/json" },
             body: JSON.stringify({
               access_key: window.TOVALE.web3formsKey,
-              subject: "פנייה מהאתר — " + d.name,
+              subject: "פנייה מהאתר - " + d.name,
               from_name: "אתר טובל'ה בעיר",
               message: text
             })
@@ -166,7 +166,7 @@
         status.textContent = "ההודעה נשלחה! נחזור אליכם בהקדם 🎉";
       } else {
         window.open("https://wa.me/" + window.TOVALE.whatsapp + "?text=" + encodeURIComponent(text), "_blank");
-        status.textContent = "פתחנו לכם וואטסאפ עם ההודעה — רק ללחוץ שליחה 🎉";
+        status.textContent = "פתחנו לכם וואטסאפ עם ההודעה - רק ללחוץ שליחה 🎉";
       }
     });
   });

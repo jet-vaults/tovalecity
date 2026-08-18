@@ -1,4 +1,4 @@
-/* Toval'e City — /menu page: category nav, search, filters, sections */
+/* Toval'e City - /menu page: category nav, search, filters, sections */
 (async function () {
   const esc = window.tovaleEsc;
   const menu = await window.tovaleLoadMenu();

@@ -1,6 +1,6 @@
-/* Toval'e City — site configuration */
+/* Toval'e City - site configuration */
 window.TOVALE = {
-  // Web3Forms access key for ttnovalee@gmail.com — when empty, orders are sent via WhatsApp only.
+  // Web3Forms access key for ttnovalee@gmail.com - when empty, orders are sent via WhatsApp only.
   web3formsKey: "",
   restaurantEmail: "ttnovalee@gmail.com",
   whatsapp: "972505895205",

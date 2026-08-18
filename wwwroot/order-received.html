@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>קיבלנו את ההזמנה — טובל'ה בעיר</title>
+  <title>קיבלנו את ההזמנה - טובל'ה בעיר</title>
   <meta name="robots" content="noindex">
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,10 +19,10 @@
   <section class="received-wrap container">
     <h1 class="big">קיבלנו את ההזמנה 🎉</h1>
     <p style="font-size:1.15rem">בקשת ההזמנה שלכם התקבלה. צוות טובל'ה יצור איתכם קשר לאישור סופי.</p>
-    <div class="order-no" data-order-no>מספר בקשה: —</div>
+    <div class="order-no" data-order-no>מספר בקשה: -</div>
     <p style="color:var(--ink-soft)" data-email-status></p>
     <p style="color:var(--ink-soft);font-size:.95rem;max-width:32rem;margin-inline:auto">
-      רוצים לזרז? שלחו לנו את ההזמנה גם בוואטסאפ בלחיצה אחת — כך היא מגיעה ישירות לנייד של הצוות.
+      רוצים לזרז? שלחו לנו את ההזמנה גם בוואטסאפ בלחיצה אחת - כך היא מגיעה ישירות לנייד של הצוות.
     </p>
     <div class="received-actions">
       <a class="btn btn-whatsapp" data-wa-send href="#" target="_blank" rel="noopener">שליחת ההזמנה בוואטסאפ</a>
@@ -43,7 +43,7 @@
       waBtn.href = "https://wa.me/" + window.TOVALE.whatsapp + "?text=" + encodeURIComponent(order.text);
       statusEl.textContent = order.emailOk
         ? "ההזמנה נשלחה למסעדה במייל ✓"
-        : "לחצו על כפתור הוואטסאפ כדי להעביר את ההזמנה לצוות — זה שלב חשוב!";
+        : "לחצו על כפתור הוואטסאפ כדי להעביר את ההזמנה לצוות - זה שלב חשוב!";
       if (!order.emailOk) statusEl.style.fontWeight = "700";
     } else {
       noEl.style.display = "none";

@@ -1,4 +1,4 @@
-/* Toval'e City — cart state (localStorage), shared by all pages */
+/* Toval'e City - cart state (localStorage), shared by all pages */
 (function () {
   const KEY = "tovale_cart_v1";
 

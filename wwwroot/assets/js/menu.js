@@ -1,4 +1,4 @@
-/* Toval'e City — menu data loading, rendering, item customization sheet */
+/* Toval'e City - menu data loading, rendering, item customization sheet */
 (function () {
   const NIS = window.tovaleNIS, esc = window.tovaleEsc;
   let MENU = null;
