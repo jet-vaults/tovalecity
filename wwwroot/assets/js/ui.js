@@ -102,7 +102,8 @@
             <li><a href="tel:${C.cateringPhone.replace(/-/g, "")}">קייטרינג: ${C.cateringPhone}</a></li>
             <li><a href="mailto:${C.restaurantEmail}">${C.restaurantEmail}</a></li>
             <li><a href="/assets/docs/tovale-menu-2025.pdf" target="_blank" rel="noopener">תפריט PDF</a></li>
-            <li><a href="/assets/docs/accessibility-statement.pdf" target="_blank" rel="noopener">הצהרת נגישות</a></li>
+            <li><a href="/accessibility">הצהרת נגישות</a></li>
+            <li><a href="/privacy">מדיניות פרטיות</a></li>
           </ul>
         </div>
       </div>
@@ -112,6 +113,79 @@
       </div>
     </div>`;
   document.body.appendChild(footer);
+
+  /* credit strip below the footer */
+  const credit = document.createElement("div");
+  credit.className = "site-credit";
+  credit.innerHTML = `Powered by <a href="https://einstein-web.co.il" target="_blank" rel="noopener">Einstein-web</a>`;
+  document.body.appendChild(credit);
+
+  /* ---------- accessibility widget ---------- */
+  const A11Y_KEY = "tovale_a11y";
+  let a11y = {};
+  try { a11y = JSON.parse(localStorage.getItem(A11Y_KEY) || "{}"); } catch {}
+  const applyA11y = () => {
+    const h = document.documentElement.classList;
+    h.toggle("a11y-font1", a11y.font === 1);
+    h.toggle("a11y-font2", a11y.font === 2);
+    h.toggle("a11y-contrast", !!a11y.contrast);
+    h.toggle("a11y-grayscale", !!a11y.gray);
+    h.toggle("a11y-links", !!a11y.links);
+    h.toggle("a11y-motion", !!a11y.motion);
+    localStorage.setItem(A11Y_KEY, JSON.stringify(a11y));
+  };
+  applyA11y();
+
+  const a11yBtn = document.createElement("button");
+  a11yBtn.className = "a11y-btn";
+  a11yBtn.setAttribute("aria-label", "פתיחת תפריט נגישות");
+  a11yBtn.setAttribute("aria-expanded", "false");
+  a11yBtn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4.5" r="2"/><path d="M4.5 9c2.4.7 4.9 1 7.5 1s5.1-.3 7.5-1"/><path d="M12 10v4.5l-3.2 6"/><path d="M12 14.5l3.2 6"/></svg>`;
+  const a11yPanel = document.createElement("div");
+  a11yPanel.className = "a11y-panel";
+  a11yPanel.setAttribute("role", "dialog");
+  a11yPanel.setAttribute("aria-label", "אפשרויות נגישות");
+  a11yPanel.innerHTML = `
+    <strong>שירותי נגישות</strong>
+    <button data-a="font">הגדלת טקסט <span data-font-state></span></button>
+    <button data-a="contrast">ניגודיות כהה</button>
+    <button data-a="gray">גווני אפור</button>
+    <button data-a="links">הדגשת קישורים</button>
+    <button data-a="motion">עצירת אנימציות</button>
+    <button data-a="reset">איפוס הגדרות</button>
+    <a href="/accessibility">הצהרת נגישות</a>`;
+  document.body.appendChild(a11yBtn);
+  document.body.appendChild(a11yPanel);
+
+  const refreshPanel = () => {
+    a11yPanel.querySelector('[data-a="contrast"]').classList.toggle("on", !!a11y.contrast);
+    a11yPanel.querySelector('[data-a="gray"]').classList.toggle("on", !!a11y.gray);
+    a11yPanel.querySelector('[data-a="links"]').classList.toggle("on", !!a11y.links);
+    a11yPanel.querySelector('[data-a="motion"]').classList.toggle("on", !!a11y.motion);
+    a11yPanel.querySelector('[data-a="font"]').classList.toggle("on", !!a11y.font);
+    a11yPanel.querySelector("[data-font-state]").textContent = a11y.font ? `(${a11y.font}/2)` : "";
+  };
+  refreshPanel();
+  a11yBtn.addEventListener("click", () => {
+    const open = a11yPanel.classList.toggle("open");
+    a11yBtn.setAttribute("aria-expanded", String(open));
+  });
+  a11yPanel.addEventListener("click", e => {
+    const b = e.target.closest("[data-a]");
+    if (!b) return;
+    const k = b.dataset.a;
+    if (k === "reset") a11y = {};
+    else if (k === "font") a11y.font = ((a11y.font || 0) + 1) % 3;
+    else a11y[k === "gray" ? "gray" : k] = !a11y[k === "gray" ? "gray" : k];
+    applyA11y(); refreshPanel();
+  });
+  document.addEventListener("click", e => {
+    if (!a11yPanel.classList.contains("open")) return;
+    if (!e.target.closest(".a11y-panel") && !e.target.closest(".a11y-btn")) {
+      a11yPanel.classList.remove("open");
+      a11yBtn.setAttribute("aria-expanded", "false");
+    }
+  });
 
   /* ---------- cart drawer ---------- */
   const backdrop = document.createElement("div");
