@@ -709,7 +709,7 @@ body.has-orderbar { padding-bottom: 84px; }
 
 /* ============ accessibility widget ============ */
 .a11y-btn {
-  position: fixed; bottom: 18px; inset-inline-end: 18px; z-index: 260;
+  position: fixed; bottom: 18px; left: 18px; z-index: 260;
   width: 48px; height: 48px; border: none; border-radius: 5px;
   background: var(--green-900); color: #fff;
   display: flex; align-items: center; justify-content: center;
@@ -717,15 +717,18 @@ body.has-orderbar { padding-bottom: 84px; }
 }
 .a11y-btn svg { width: 26px; height: 26px; }
 .a11y-btn:hover { background: var(--green-800); }
-body.has-orderbar .a11y-btn { bottom: 92px; }
 .a11y-panel {
-  position: fixed; bottom: 76px; inset-inline-end: 18px; z-index: 260;
+  position: fixed; bottom: 76px; left: 18px; z-index: 260;
   width: 220px; background: #fff; border: 1px solid var(--beige); border-radius: 5px;
   box-shadow: var(--shadow-pop); padding: 0.9rem;
   display: none; flex-direction: column; gap: 6px;
 }
 .a11y-panel.open { display: flex; }
-body.has-orderbar .a11y-panel { bottom: 150px; }
+/* mobile: hide the widget while the order bar or a drawer/popup is on screen */
+@media (max-width: 900px) {
+  body.has-orderbar .a11y-btn, body.has-orderbar .a11y-panel,
+  body.no-scroll .a11y-btn, body.no-scroll .a11y-panel { display: none; }
+}
 .a11y-panel strong { font-size: 1rem; margin-bottom: 4px; color: var(--green-900); }
 .a11y-panel button {
   border: 1.5px solid var(--beige); background: #fff; color: var(--ink);
