@@ -100,8 +100,6 @@
       if (!visible) return;
       const id = visible.target.id.replace("cat-", "");
       catNav.querySelectorAll("button").forEach(b => b.classList.toggle("active", b.dataset.goto === id));
-      const activeBtn = catNav.querySelector("button.active");
-      if (activeBtn) activeBtn.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
     }, { rootMargin: "-30% 0px -55% 0px", threshold: [0, 0.2, 0.5] });
     sections.querySelectorAll(".menu-cat").forEach(s => catObserver.observe(s));
   }
