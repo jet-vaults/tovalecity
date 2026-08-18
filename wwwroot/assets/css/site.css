@@ -633,11 +633,12 @@ body.has-orderbar { padding-bottom: 84px; }
 
 /* ============ catering / about / static pages ============ */
 .page-hero {
-  position: relative; min-height: 46vh; display: flex; align-items: flex-end;
+  /* identical height and text position on every page */
+  position: relative; height: clamp(320px, 42vh, 480px); display: flex; align-items: flex-end;
   color: var(--white); overflow: hidden;
 }
 .page-hero .hero-bg::after { background: linear-gradient(10deg, rgba(0, 0, 0, 0.74) 10%, rgba(0, 0, 0, 0.28) 70%); }
-.page-hero.compact { min-height: 36vh; }
+.page-hero .hero-content { padding-block: 2.2rem; }
 .page-hero .hero-content { padding-block: clamp(2rem, 5vw, 3.4rem); }
 .page-hero h1 { font-size: var(--fs-h1); }
 .page-hero p { max-width: 36rem; color: rgba(255, 253, 249, 0.88); font-size: 1.1rem; }
