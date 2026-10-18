@@ -29,7 +29,7 @@
         <h3 class="dish-name">${esc(item.name)}</h3>
         ${item.description ? `<p class="dish-desc">${esc(item.description)}</p>` : ""}
         <div class="dish-foot">
-          <span class="price">${hasVariablePrice(item) ? '<span class="from">החל מ־</span>' : ""}${NIS(item.price)}</span>
+          ${item.price != null ? `<span class="price">${hasVariablePrice(item) ? '<span class="from">החל מ־</span>' : ""}${NIS(item.price)}</span>` : ""}
           <button class="add-btn" data-add="${item.id}" ${item.available === false ? "disabled" : ""} aria-label="הוספת ${esc(item.name)} להזמנה">
             ${item.available === false ? "אזל" : "הוסף להזמנה +"}
           </button>
@@ -116,7 +116,7 @@
           </fieldset>` : ""}
         <div class="opt-group">
           <h3>הערות למנה</h3>
-          <textarea data-note placeholder="הערות למנה... (לא חובה)" maxlength="200"></textarea>
+          <textarea data-note placeholder="גודל מגש, כמות אורחים, בקשות מיוחדות... (לא חובה)" maxlength="200"></textarea>
         </div>
       </div>
       <div class="sheet-foot">
@@ -157,7 +157,7 @@
       });
     }
     function unitPrice() {
-      const base = item.price + selectedOptions().reduce((n, o) => n + o.priceDelta, 0);
+      const base = (item.price || 0) + selectedOptions().reduce((n, o) => n + o.priceDelta, 0);
       return base + selectedAddons().reduce((n, a) => n + a.price, 0);
     }
     function refresh() {
@@ -181,7 +181,8 @@
         });
       }
       sheetEl.querySelector("[data-qty]").textContent = qty;
-      sheetEl.querySelector("[data-total]").textContent = NIS(unitPrice() * qty);
+      const total = unitPrice() * qty;
+      sheetEl.querySelector("[data-total]").textContent = total > 0 ? NIS(total) : "";
     }
 
     sheetEl.addEventListener("change", refresh);
@@ -212,9 +213,9 @@
 
   /* quick add: items without options/addons skip the sheet */
   window.tovaleQuickAdd = function (item) {
-    const needsSheet = (item.options && item.options.length) || item.addons || item.addonGroup;
+    const needsSheet = (item.options && item.options.length) || item.addons || item.addonGroup || item.price == null;
     if (needsSheet) { window.tovaleOpenItem(item); return; }
-    TovaleCart.add({ itemId: item.id, name: item.name, unitPrice: item.price, qty: 1, options: [], addons: [], note: "" });
+    TovaleCart.add({ itemId: item.id, name: item.name, unitPrice: item.price || 0, qty: 1, options: [], addons: [], note: "" });
     window.tovaleToast(`${item.name} נוסף להזמנה 🎉`);
   };
 

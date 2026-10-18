@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>טובל'ה בעיר - מסעדה חלבית כשרה וקייטרינג בשדרות</title>
-  <meta name="description" content="טובל'ה בעיר - מסעדה חלבית איטלקית כשרה בשדרות. פיצות, פסטות, סלטים ומאפים. הזמינו אונליין לאיסוף או משלוח, וקייטרינג חלבי מעוצב לאירועים.">
+  <title>טובל'ה בעיר - מגשי אירוח וקייטרינג חלבי בשדרות</title>
+  <meta name="description" content="טובל'ה בעיר - מגשי אירוח, בופה מעוצב וקייטרינג חלבי ופרווה לאירועים, לצד מסעדה חלבית, טייק אווי ומשלוחים. כשר למהדרין בהשגחת רבנות שדרות.">
   <link rel="canonical" href="https://tovalecity.co.il/">
-  <meta property="og:title" content="טובל'ה בעיר - אוכל חלבי שעושה שמח">
-  <meta property="og:description" content="מסעדה חלבית איטלקית כשרה בשדרות. תפריט מלא, הזמנה אונליין וקייטרינג לאירועים.">
+  <meta property="og:title" content="טובל'ה בעיר - מגשי אירוח וקייטרינג חלבי">
+  <meta property="og:description" content="מגשי אירוח, בופה מעוצב וקייטרינג חלבי ופרווה - כשר למהדרין, טרי ומוגש בעיצוב שעושה כבוד לכל אירוע.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tovalecity.co.il/">
-  <meta property="og:image" content="https://tovalecity.co.il/assets/img/hero-evening-buffet-lg.webp">
+  <meta property="og:image" content="https://tovalecity.co.il/assets/img/platters/antipasti-tray-1200.webp">
   <meta property="og:locale" content="he_IL">
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/site.css">
+  <link rel="stylesheet" href="/assets/css/site.css?v=20261018">
   <link rel="preload" as="image" href="/assets/img/hero-evening-buffet-lg.webp">
   <script defer src="/assets/js/config.js"></script>
   <script defer src="/assets/js/cart.js"></script>
@@ -25,14 +25,15 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Restaurant",
+    "@type": "FoodEstablishment",
     "name": "טובל'ה בעיר",
-    "servesCuisine": ["Italian", "Dairy", "Kosher"],
+    "description": "מגשי אירוח, בופה מעוצב וקייטרינג חלבי ופרווה לאירועים. מסעדה חלבית, טייק אווי ומשלוחים. כשר למהדרין בהשגחת רבנות שדרות.",
+    "servesCuisine": ["Dairy", "Kosher", "Mediterranean"],
     "url": "https://tovalecity.co.il/",
     "telephone": "+97286611880",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "בן יהודה 23",
+      "streetAddress": "אהבת ישראל 17",
       "addressLocality": "שדרות",
       "addressCountry": "IL"
     },
@@ -40,71 +41,83 @@
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"], "opens": "08:00", "closes": "23:00" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "19:30", "closes": "00:00" }
     ],
-    "menu": "https://tovalecity.co.il/menu",
-    "acceptsReservations": "True"
+    "menu": "https://tovalecity.co.il/platters"
   }
   </script>
 </head>
 <body data-page="home">
 <main id="main">
 
-  <!-- hero: full-width banner, clear photo, callout card -->
+  <!-- hero -->
   <section class="hero-banner">
-    <img src="/assets/img/hero-evening-buffet-lg.webp" alt="שולחן ערוך במסעדת טובל'ה בעיר - פיצות, סלטים ומאפים" fetchpriority="high">
+    <img src="/assets/img/hero-evening-buffet-lg.webp" alt="שולחן אירוח ערוך של טובל'ה בעיר - מגשים, סלטים ומאפים" fetchpriority="high">
     <div class="container hero-banner-inner">
       <div class="hero-center">
         <h1>טובל'ה בעיר</h1>
-        <p class="lead">מטבח איטלקי עשיר עם הרבה שמן זית וגבינות - פיצות, פסטות, סלטים ומאפים שנאפים כאן כל בוקר.</p>
+        <p class="lead">מגשי אירוח, בופה מעוצב וקייטרינג חלבי ופרווה - כשר למהדרין, טרי ומוגש בעיצוב שעושה כבוד לכל אירוע.</p>
         <div class="hero-actions">
-          <a class="btn btn-light" href="/menu">לתפריט ולהזמנה</a>
+          <a class="btn btn-light" href="/platters">מגשי האירוח שלנו</a>
           <a class="btn btn-outline hero-btn-ghost" href="/catering">קייטרינג לאירוע</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- popular dishes -->
-  <section class="section" aria-labelledby="h-popular">
-    <div class="container" style="position:relative;z-index:1">
-      <div class="section-head">
-        <span class="eyebrow">חם מהמטבח</span>
-        <h2 id="h-popular">המנות שאוהבים אצלנו</h2>
-        <p>הקליקו על מנה, התאימו אותה בדיוק אליכם והוסיפו להזמנה - בלי חיוב באתר.</p>
+  <!-- who we are -->
+  <section class="section" aria-labelledby="h-who">
+    <div class="container">
+      <div class="split reveal">
+        <div class="split-media">
+          <img src="/assets/img/platters/antipasti-tray-1200.webp" alt="מגש אנטיפסטי של טובל'ה בעיר" loading="lazy" width="1200" height="1200">
+        </div>
+        <div>
+          <span class="eyebrow" style="display:inline-block;font-weight:800;font-size:.88rem;letter-spacing:.12em;color:var(--green-700);margin-bottom:.5rem">מי אנחנו</span>
+          <h2 id="h-who">אוכל חלבי שעושה שמח - מהמטבח שלנו עד השולחן שלכם</h2>
+          <p>חברתנו מספקת ארוחות חלביות ופרווה - בטייק אווי, במשלוחים, בבופה מעוצב ובמגשי אירוח. הכל מוכן טרי במטבח שלנו בשדרות, כשר למהדרין בהשגחת רבנות שדרות.</p>
+          <p>מאחורי הסירים והמגשים עומד ניב קקון, שמנהל רומן של יותר מעשור עם טובל'ה בעיר - האנשים שלה והמנות שלה.</p>
+          <a class="btn btn-outline" href="/about">הסיפור שלנו</a>
+        </div>
       </div>
-      <div class="dish-grid reveal" data-featured></div>
-      <p class="cta-more"><a class="btn btn-primary" href="/menu">לתפריט המלא ›</a></p>
     </div>
   </section>
 
-  <!-- three experiences -->
-  <section class="section section-beige" aria-labelledby="h-exp">
+  <!-- services -->
+  <section class="section section-beige" aria-labelledby="h-services">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">שלוש דרכים ליהנות</span>
-        <h2 id="h-exp">איך בא לכם את טובל'ה היום?</h2>
+        <span class="eyebrow">שירותינו</span>
+        <h2 id="h-services">מה אנחנו מציעים</h2>
       </div>
-      <div class="exp-grid reveal">
+      <div class="exp-grid svc-grid reveal">
         <a class="exp-card" href="/about">
           <img src="/assets/img/hero-evening-buffet-lg.webp" alt="" loading="lazy">
           <div class="exp-body">
-            <h3>מסעדה</h3>
-            <p>יושבים, מזמינים, נהנים. ארוחת בוקר ישראלית, פיצות ופסטות - באווירה חמה בלב שדרות.</p>
+            <h3>מסעדה חלבית</h3>
+            <p>יושבים, מזמינים, נהנים - מטבח חלבי עשיר באווירה חמה בלב שדרות.</p>
             <span class="exp-link">הסיפור שלנו ›</span>
           </div>
         </a>
-        <a class="exp-card" href="/menu">
+        <a class="exp-card" href="/contact">
           <img src="/assets/img/takeaway-boxes-lg.webp" alt="" loading="lazy">
           <div class="exp-body">
-            <h3>Take Away ומשלוחים</h3>
-            <p>מרכיבים הזמנה באתר, אנחנו מכינים - ואתם אוספים חם או מקבלים עד הבית.</p>
-            <span class="exp-link">להזמנה עכשיו ›</span>
+            <h3>טייק אווי ומשלוחים</h3>
+            <p>אוספים חם מהמסעדה או מקבלים עד הבית - מתקשרים ואנחנו מכינים.</p>
+            <span class="exp-link">להזמנה טלפונית ›</span>
+          </div>
+        </a>
+        <a class="exp-card" href="/platters">
+          <img src="/assets/img/platters/bruschetta-tray-640.webp" alt="" loading="lazy">
+          <div class="exp-body">
+            <h3>מגשי אירוח</h3>
+            <p>מגשים עשירים ומעוצבים, מוכנים להגשה - לאירוח בבית, במשרד ובכל שמחה.</p>
+            <span class="exp-link">למגשי האירוח ›</span>
           </div>
         </a>
         <a class="exp-card" href="/catering">
           <img src="/assets/img/catering-grand-spread-lg.webp" alt="" loading="lazy">
           <div class="exp-body">
-            <h3>קייטרינג</h3>
-            <p>בופה חלבי מעוצב ומגשי אירוח לכל אירוע - בריתות, ימי הולדת, אירועים עסקיים ומשפחתיים.</p>
+            <h3>בופה וקייטרינג חלבי ופרווה</h3>
+            <p>בופה מעוצב לכל אירוע - בריתות, ימי הולדת, אירועים עסקיים ומשפחתיים.</p>
             <span class="exp-link">קייטרינג לאירוע ›</span>
           </div>
         </a>
@@ -112,43 +125,28 @@
     </div>
   </section>
 
-  <!-- about preview -->
-  <section class="section" aria-labelledby="h-about">
-    <div class="container">
-      <div class="split reveal">
-        <div class="split-media">
-          <img src="/assets/img/bruschetta-board-lg.webp" alt="מגש ברוסקטות של טובל'ה בעיר" loading="lazy">
-        </div>
-        <div>
-          <span class="eyebrow" style="display:inline-block;font-weight:800;font-size:.88rem;letter-spacing:.12em;color:var(--green-700);margin-bottom:.5rem">מאחורי הקלעים</span>
-          <h2 id="h-about">יותר ממסעדה. מקום של אוכל, אנשים ושמחה.</h2>
-          <p>בטובל'ה בעיר כל ארוחה היא חגיגה - הזדמנות לפתוח שולחן, לבלות עם משפחה וחברים וליהנות מהחיים. את הקסם הזה מביא ניב קקון, שמנהל רומן של יותר מעשור עם המסעדה, האנשים והמנות שלה.</p>
-          <a class="btn btn-outline" href="/about">הסיפור שלנו</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- gallery -->
-  <section class="section section-beige" aria-labelledby="h-gallery">
+  <!-- platters preview -->
+  <section class="section" aria-labelledby="h-platters">
     <div class="container">
       <div class="section-head">
         <span class="eyebrow">טעימה בעיניים</span>
-        <h2 id="h-gallery">מהמטבח שלנו</h2>
+        <h2 id="h-platters">מגשי האירוח שלנו</h2>
+        <p>בוחרים את המגשים שאתם אוהבים, מוסיפים לרשימה ושולחים לנו בוואטסאפ - אנחנו חוזרים אליכם לסגירה.</p>
       </div>
       <div class="gallery reveal">
-        <a class="g-tall" href="/reviews"><img src="/assets/img/zaatar-focaccia-lg.webp" alt="פוקצ'ת זעתר טרייה" loading="lazy"></a>
-        <a href="/reviews"><img src="/assets/img/pasta-cream-pots-lg.webp" alt="פסטה ברוטב שמנת" loading="lazy"></a>
-        <a href="/reviews"><img src="/assets/img/bourekas-closeup-lg.webp" alt="מאפי שומשום חמים" loading="lazy"></a>
-        <a class="g-wide" href="/reviews"><img src="/assets/img/catering-slices-table-lg.webp" alt="שולחן קייטרינג עשיר" loading="lazy"></a>
-        <a href="/reviews"><img src="/assets/img/cigars-plate-lg.webp" alt="סיגרים ביתיים" loading="lazy"></a>
-        <a href="/reviews"><img src="/assets/img/pizza-zaatar-buffet-lg.webp" alt="פיצות טריות מהתנור" loading="lazy"></a>
+        <a href="/platters#cat-trays"><img src="/assets/img/platters/pizza-tray-640.webp" alt="מגש פיצות" loading="lazy"></a>
+        <a href="/platters#cat-trays"><img src="/assets/img/platters/cheese-platter-640.webp" alt="פלטת גבינות" loading="lazy"></a>
+        <a href="/platters#cat-salads"><img src="/assets/img/platters/salad-health-640.webp" alt="סלט בריאות" loading="lazy"></a>
+        <a href="/platters#cat-trays"><img src="/assets/img/platters/focaccia-tray-640.webp" alt="מגש פוקאצ'ות" loading="lazy"></a>
+        <a href="/platters#cat-salads"><img src="/assets/img/platters/salad-caprese-640.webp" alt="סלט קפרזה" loading="lazy"></a>
+        <a href="/platters#cat-bites"><img src="/assets/img/platters/arancini-640.webp" alt="כדורי ארנצ'יני" loading="lazy"></a>
       </div>
+      <p class="cta-more"><a class="btn btn-primary" href="/platters">לכל מגשי האירוח ›</a></p>
     </div>
   </section>
 
   <!-- reviews -->
-  <section class="section" aria-labelledby="h-reviews">
+  <section class="section section-beige" aria-labelledby="h-reviews">
     <div class="container">
       <div class="section-head">
         <span class="eyebrow">Google ★ 4.8</span>
@@ -159,25 +157,22 @@
           <div class="review-head">
             <span class="avatar" aria-hidden="true">A</span>
             <div class="who"><span class="name">Amir Kitron</span><span class="stars" aria-label="חמישה כוכבים">★★★★★</span></div>
-            
           </div>
           <p>האוכל ברמה מאוד גבוהה, ביצעתי קייטרינג לאירוע של 100 איש. עלה על כל הציפיות - ממליץ מאוד!</p>
         </div>
         <div class="review-card">
           <div class="review-head">
-            <span class="avatar" aria-hidden="true">ד</span>
-            <div class="who"><span class="name">דודי משה</span><span class="stars" aria-label="חמישה כוכבים">★★★★★</span></div>
-            
+            <span class="avatar" aria-hidden="true">ל</span>
+            <div class="who"><span class="name">ליעד דדון</span><span class="stars" aria-label="חמישה כוכבים">★★★★★</span></div>
           </div>
-          <p>פיצה ברמה גבוהה, סלט מפנק, פסטה נדירה.</p>
+          <p>הזמנתי קייטרינג חלבי והיה מאוד טעים, מגוון ומוצלח! ניב ממש פירגן בכל, עזר לי עם מה שצריך והגיע עד למרכז. ממליצה מאוד!!</p>
         </div>
         <div class="review-card">
           <div class="review-head">
             <span class="avatar" aria-hidden="true">O</span>
             <div class="who"><span class="name">Oshrat Cohen</span><span class="stars" aria-label="חמישה כוכבים">★★★★★</span></div>
-            
           </div>
-          <p>פשוט טעים ברמות... בניגוד להרבה פיצריות המחיר נשאר אותו דבר. שווה כל שקל ושווה את הנסיעה. הפיצה הכי טובה בשדרות 💖</p>
+          <p>פשוט טעים ברמות... בניגוד להרבה מקומות המחיר נשאר אותו דבר. שווה כל שקל ושווה את הנסיעה 💖</p>
         </div>
       </div>
       <p style="margin-top:1.4rem"><a class="btn btn-outline" href="/reviews">לכל הביקורות והגלריה</a></p>
@@ -194,10 +189,10 @@
       <div class="info-grid reveal">
         <div class="info-card">
           <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> כתובת</h3>
-          <p>בן יהודה 23, שדרות</p>
+          <p>אהבת ישראל 17, שדרות</p>
           <p style="margin-top:.5rem">
-            <a href="https://maps.google.com/?q=בן יהודה 23 שדרות" target="_blank" rel="noopener">Google Maps</a> ·
-            <a href="https://waze.com/ul?q=בן יהודה 23 שדרות&navigate=yes" target="_blank" rel="noopener">Waze</a>
+            <a href="https://maps.google.com/?q=אהבת ישראל 17 שדרות" target="_blank" rel="noopener">Google Maps</a> ·
+            <a href="https://waze.com/ul?q=אהבת ישראל 17 שדרות&navigate=yes" target="_blank" rel="noopener">Waze</a>
           </p>
         </div>
         <div class="info-card">
@@ -225,12 +220,5 @@
   </section>
 
 </main>
-<script>
-  document.addEventListener("DOMContentLoaded", async () => {
-    const menu = await window.tovaleLoadMenu();
-    const featured = menu.items.filter(i => i.featured && i.available !== false).slice(0, 6);
-    document.querySelector("[data-featured]").innerHTML = featured.map(window.tovaleDishCard).join("");
-  });
-</script>
 </body>
 </html>

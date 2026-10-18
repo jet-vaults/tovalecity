@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/site.css">
+  <link rel="stylesheet" href="/assets/css/site.css?v=20261018">
   <script defer src="/assets/js/config.js"></script>
   <script defer src="/assets/js/cart.js"></script>
   <script defer src="/assets/js/ui.js"></script>
@@ -17,17 +17,17 @@
 <body data-page="order">
 <main id="main">
   <section class="received-wrap container">
-    <h1 class="big">קיבלנו את ההזמנה 🎉</h1>
-    <p style="font-size:1.15rem">בקשת ההזמנה שלכם התקבלה. צוות טובל'ה יצור איתכם קשר לאישור סופי.</p>
+    <h1 class="big">ההזמנה בדרך אלינו 🎉</h1>
+    <p style="font-size:1.15rem">נפתח לכם וואטסאפ עם פרטי ההזמנה - רק ללחוץ שליחה, ואנחנו חוזרים אליכם לסגירה.</p>
     <div class="order-no" data-order-no>מספר בקשה: -</div>
     <p style="color:var(--ink-soft)" data-email-status></p>
     <p style="color:var(--ink-soft);font-size:.95rem;max-width:32rem;margin-inline:auto">
-      רוצים לזרז? שלחו לנו את ההזמנה גם בוואטסאפ בלחיצה אחת - כך היא מגיעה ישירות לנייד של הצוות.
+      הוואטסאפ לא נפתח? לחצו על הכפתור למטה וההזמנה תישלח אלינו בלחיצה אחת.
     </p>
     <div class="received-actions">
       <a class="btn btn-whatsapp" data-wa-send href="#" target="_blank" rel="noopener">שליחת ההזמנה בוואטסאפ</a>
       <a class="btn btn-outline" href="tel:086611880">התקשרו אלינו</a>
-      <a class="btn btn-primary" href="/menu">חזרה לתפריט</a>
+      <a class="btn btn-primary" href="/platters">חזרה למגשים</a>
     </div>
   </section>
 </main>
@@ -42,9 +42,9 @@
       noEl.textContent = "מספר בקשה: " + order.orderNo;
       waBtn.href = "https://wa.me/" + window.TOVALE.whatsapp + "?text=" + encodeURIComponent(order.text);
       statusEl.textContent = order.emailOk
-        ? "ההזמנה נשלחה למסעדה במייל ✓"
-        : "לחצו על כפתור הוואטסאפ כדי להעביר את ההזמנה לצוות - זה שלב חשוב!";
-      if (!order.emailOk) statusEl.style.fontWeight = "700";
+        ? "ההזמנה נשלחה גם במייל ✓"
+        : (order.waOpened ? "" : "לחצו על כפתור הוואטסאפ כדי להעביר לנו את ההזמנה - זה שלב חשוב!");
+      if (!order.emailOk && !order.waOpened) statusEl.style.fontWeight = "700";
     } else {
       noEl.style.display = "none";
       waBtn.style.display = "none";

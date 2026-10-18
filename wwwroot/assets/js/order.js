@@ -27,11 +27,11 @@
             ${l.addons && l.addons.length ? `<div class="d">+ ${l.addons.map(a => esc(a.label)).join(", ")}</div>` : ""}
             ${l.note ? `<div class="d">“${esc(l.note)}”</div>` : ""}
           </div>
-          <span class="price">${NIS(l.unitPrice * l.qty)}</span>
+          ${l.unitPrice ? `<span class="price">${NIS(l.unitPrice * l.qty)}</span>` : ""}
         </div>`).join("")}
-      <div class="sum-total"><span>סה"כ להזמנה</span><span>${NIS(snap.total)}</span></div>
+      ${snap.total > 0 ? `<div class="sum-total"><span>סה"כ להזמנה</span><span>${NIS(snap.total)}</span></div>` : ""}
       <p style="margin-top:.8rem;font-size:.88rem;color:var(--ink-soft)">
-        <a href="/menu" style="color:var(--green-800);font-weight:700">חזרה לתפריט לעריכה ›</a>
+        <a href="/platters" style="color:var(--green-800);font-weight:700">חזרה למגשים לעריכה ›</a>
       </p>`;
   }
   renderSummary();
@@ -66,14 +66,13 @@
     L.push(`מספר בקשה: ${orderNo}`);
     L.push(``);
     snap.lines.forEach(l => {
-      L.push(`▪ ${l.qty} × ${l.name} - ${NIS(l.unitPrice * l.qty)}`);
+      L.push(`▪ ${l.qty} × ${l.name}${l.unitPrice ? ` - ${NIS(l.unitPrice * l.qty)}` : ""}`);
       (l.options || []).forEach(o => L.push(`   ${o.label}`));
       (l.addons || []).forEach(a => L.push(`   + ${a.label}${a.price ? ` (+${NIS(a.price)})` : ""}`));
       if (l.note) L.push(`   הערה: ${l.note}`);
     });
     L.push(``);
-    L.push(`סה"כ: ${NIS(snap.total)} (לתשלום במסעדה - לא בוצע חיוב באתר)`);
-    L.push(``);
+    if (snap.total > 0) { L.push(`סה"כ: ${NIS(snap.total)} (לא בוצע חיוב באתר)`); L.push(``); }
     L.push(`פרטי הלקוח/ה:`);
     L.push(`שם: ${data.name}`);
     L.push(`טלפון: ${data.phone}`);
@@ -89,7 +88,7 @@
   form.addEventListener("submit", async e => {
     e.preventDefault();
     const snap = TovaleCart.get();
-    if (!snap.lines.length) { location.href = "/menu"; return; }
+    if (!snap.lines.length) { location.href = "/platters"; return; }
 
     /* validate */
     let valid = true;
@@ -117,7 +116,12 @@
 
     const submitBtn = form.querySelector('button[type="submit"]');
     submitBtn.disabled = true;
-    submitBtn.textContent = "שולחים את ההזמנה...";
+    submitBtn.textContent = "פותחים וואטסאפ...";
+
+    /* the order goes to the restaurant's WhatsApp; opened before any await so browsers allow it */
+    const waUrl = "https://wa.me/" + C.whatsapp + "?text=" + encodeURIComponent(text);
+    const waWin = window.open(waUrl, "_blank");
+    const waOpened = !!waWin;
 
     let emailOk = false;
     if (C.web3formsKey) {
@@ -139,7 +143,7 @@
 
     /* stash for the confirmation page */
     sessionStorage.setItem("tovale_last_order", JSON.stringify({
-      orderNo, text, emailOk, total: snap.total, count: snap.count, name: data.name
+      orderNo, text, emailOk, waOpened, total: snap.total, count: snap.count, name: data.name
     }));
     TovaleCart.clear();
     location.href = "/order-received";

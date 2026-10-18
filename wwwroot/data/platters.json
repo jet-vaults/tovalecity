@@ -1,0 +1,51 @@
+{
+  "currency": "₪",
+  "note": "מחירים ותיאורים יתווספו לפי התפריט המסודר של טובל'ה. price=null מסתיר מחיר באתר.",
+  "categories": [
+    { "id": "trays", "name": "מגשי אירוח", "nav": "מגשי אירוח", "note": "מגשים עשירים ומעוצבים, מוכנים להגשה - לאירוח בבית, במשרד ובכל שמחה." },
+    { "id": "salads", "name": "סלטים", "nav": "סלטים", "note": "סלטים טריים בקערות אירוח גדולות, נחתכים ביום ההזמנה." },
+    { "id": "bites", "name": "מנות ופינוקים", "nav": "מנות ופינוקים", "note": "מנות חמות, מאפים ופינוקים קטנים שמשלימים את השולחן." }
+  ],
+  "toppings": [],
+  "toastToppings": [],
+  "addonGroups": {},
+  "items": [
+    { "id": "antipasti-tray", "categoryId": "trays", "name": "מגש אנטיפסטי", "price": null, "available": true, "featured": true, "image": "assets/img/platters/antipasti-tray-640.webp", "imageLg": "assets/img/platters/antipasti-tray-1200.webp" },
+    { "id": "bruschetta-tray", "categoryId": "trays", "name": "מגש ברוסקטות", "price": null, "available": true, "featured": true, "image": "assets/img/platters/bruschetta-tray-640.webp", "imageLg": "assets/img/platters/bruschetta-tray-1200.webp" },
+    { "id": "cheese-platter", "categoryId": "trays", "name": "פלטת גבינות", "price": null, "available": true, "featured": true, "image": "assets/img/platters/cheese-platter-640.webp", "imageLg": "assets/img/platters/cheese-platter-1200.webp" },
+    { "id": "pizza-tray", "categoryId": "trays", "name": "מגש פיצות", "price": null, "available": true, "featured": true, "image": "assets/img/platters/pizza-tray-640.webp", "imageLg": "assets/img/platters/pizza-tray-1200.webp" },
+    { "id": "focaccia-tray", "categoryId": "trays", "name": "מגש פוקאצ'ות", "price": null, "available": true, "featured": true, "image": "assets/img/platters/focaccia-tray-640.webp", "imageLg": "assets/img/platters/focaccia-tray-1200.webp" },
+    { "id": "tortilla-tray", "categoryId": "trays", "name": "מגש טורטיות", "price": null, "available": true, "featured": false, "image": "assets/img/platters/tortilla-tray-640.webp", "imageLg": "assets/img/platters/tortilla-tray-1200.webp" },
+    { "id": "ziva-tray", "categoryId": "trays", "name": "מגש זיוויות", "price": null, "available": true, "featured": false, "image": "assets/img/platters/ziva-tray-640.webp", "imageLg": "assets/img/platters/ziva-tray-1200.webp" },
+    { "id": "sambusak-malawach-tray", "categoryId": "trays", "name": "מגש סמבוסק ומלאווח", "price": null, "available": true, "featured": false, "image": "assets/img/platters/sambusak-malawach-tray-640.webp", "imageLg": "assets/img/platters/sambusak-malawach-tray-1200.webp" },
+    { "id": "bourekas-treats", "categoryId": "trays", "name": "מגש בורקס פינוקים", "price": null, "available": true, "featured": false, "image": "assets/img/platters/bourekas-treats-640.webp", "imageLg": "assets/img/platters/bourekas-treats-1200.webp" },
+    { "id": "filled-croissants", "categoryId": "trays", "name": "קרואסונים במילוי מגוון", "price": null, "available": true, "featured": false, "image": "assets/img/platters/filled-croissants-640.webp", "imageLg": "assets/img/platters/filled-croissants-1200.webp" },
+    { "id": "vine-leaves-tray", "categoryId": "trays", "name": "מגש עלי גפן", "price": null, "available": true, "featured": false, "image": "assets/img/platters/vine-leaves-tray-640.webp", "imageLg": "assets/img/platters/vine-leaves-tray-1200.webp" },
+    { "id": "vegetable-tray", "categoryId": "trays", "name": "מגש ירקות", "price": null, "available": true, "featured": false, "image": "assets/img/platters/vegetable-tray-640.webp", "imageLg": "assets/img/platters/vegetable-tray-1200.webp" },
+
+    { "id": "salad-tovale", "categoryId": "salads", "name": "סלט טובל'ה", "price": null, "available": true, "featured": true, "image": "assets/img/platters/salad-tovale-640.webp", "imageLg": "assets/img/platters/salad-tovale-1200.webp" },
+    { "id": "salad-health", "categoryId": "salads", "name": "סלט בריאות", "price": null, "available": true, "featured": false, "image": "assets/img/platters/salad-health-640.webp", "imageLg": "assets/img/platters/salad-health-1200.webp" },
+    { "id": "salad-greek", "categoryId": "salads", "name": "סלט יווני", "price": null, "available": true, "featured": false, "image": "assets/img/platters/salad-greek-640.webp", "imageLg": "assets/img/platters/salad-greek-1200.webp" },
+    { "id": "salad-caprese", "categoryId": "salads", "name": "סלט קפרזה", "price": null, "available": true, "featured": false, "image": "assets/img/platters/salad-caprese-640.webp", "imageLg": "assets/img/platters/salad-caprese-1200.webp" },
+    { "id": "salad-halloumi", "categoryId": "salads", "name": "סלט חלומי", "price": null, "available": true, "featured": false, "image": "assets/img/platters/salad-halloumi-640.webp", "imageLg": "assets/img/platters/salad-halloumi-1200.webp" },
+    { "id": "salad-salmon", "categoryId": "salads", "name": "סלט סלמון מוקפץ", "price": null, "available": true, "featured": false, "image": "assets/img/platters/salad-salmon-640.webp", "imageLg": "assets/img/platters/salad-salmon-1200.webp" },
+    { "id": "salad-asian", "categoryId": "salads", "name": "סלט אסיאתי", "price": null, "available": true, "featured": false, "image": "assets/img/platters/salad-asian-640.webp", "imageLg": "assets/img/platters/salad-asian-1200.webp" },
+    { "id": "salad-crispy", "categoryId": "salads", "name": "סלט קריספי", "price": null, "available": true, "featured": false, "image": "assets/img/platters/salad-crispy-640.webp", "imageLg": "assets/img/platters/salad-crispy-1200.webp" },
+    { "id": "salad-israeli-market", "categoryId": "salads", "name": "סלט שוק ישראלי", "price": null, "available": true, "featured": false, "image": "assets/img/platters/salad-israeli-market-640.webp", "imageLg": "assets/img/platters/salad-israeli-market-1200.webp" },
+    { "id": "salad-pasta", "categoryId": "salads", "name": "סלט פסטה", "price": null, "available": true, "featured": false, "image": "assets/img/platters/salad-pasta-640.webp", "imageLg": "assets/img/platters/salad-pasta-1200.webp" },
+    { "id": "salad-bulgur", "categoryId": "salads", "name": "סלט בורגול", "price": null, "available": true, "featured": false, "image": "assets/img/platters/salad-bulgur-640.webp", "imageLg": "assets/img/platters/salad-bulgur-1200.webp" },
+    { "id": "salad-lentil", "categoryId": "salads", "name": "סלט עדשים", "price": null, "available": true, "featured": false, "image": "assets/img/platters/salad-lentil-640.webp", "imageLg": "assets/img/platters/salad-lentil-1200.webp" },
+    { "id": "salad-greens", "categoryId": "salads", "name": "סלט עלים ירוק", "price": null, "available": true, "featured": false, "image": "assets/img/platters/salad-greens-640.webp", "imageLg": "assets/img/platters/salad-greens-1200.webp" },
+    { "id": "salad-apple", "categoryId": "salads", "name": "סלט תפוחים", "price": null, "available": true, "featured": false, "image": "assets/img/platters/salad-apple-640.webp", "imageLg": "assets/img/platters/salad-apple-1200.webp" },
+
+    { "id": "arancini", "categoryId": "bites", "name": "כדורי ארנצ'יני", "price": null, "available": true, "featured": false, "image": "assets/img/platters/arancini-640.webp", "imageLg": "assets/img/platters/arancini-1200.webp" },
+    { "id": "mini-sabich", "categoryId": "bites", "name": "מיני סביח", "price": null, "available": true, "featured": false, "image": "assets/img/platters/mini-sabich-640.webp", "imageLg": "assets/img/platters/mini-sabich-1200.webp" },
+    { "id": "mini-frikasse", "categoryId": "bites", "name": "מיני פריקסה", "price": null, "available": true, "featured": false, "image": "assets/img/platters/mini-frikasse-640.webp", "imageLg": "assets/img/platters/mini-frikasse-1200.webp" },
+    { "id": "eggplant-rolls", "categoryId": "bites", "name": "גלילות חציל", "price": null, "available": true, "featured": false, "image": "assets/img/platters/eggplant-rolls-640.webp", "imageLg": "assets/img/platters/eggplant-rolls-1200.webp" },
+    { "id": "veg-patties", "categoryId": "bites", "name": "קציצות ירק", "price": null, "available": true, "featured": false, "image": "assets/img/platters/veg-patties-640.webp", "imageLg": "assets/img/platters/veg-patties-1200.webp" },
+    { "id": "eggplant-carpaccio", "categoryId": "bites", "name": "קרפצ'יו חציל", "price": null, "available": true, "featured": false, "image": "assets/img/platters/eggplant-carpaccio-640.webp", "imageLg": "assets/img/platters/eggplant-carpaccio-1200.webp" },
+    { "id": "beet-carpaccio", "categoryId": "bites", "name": "קרפצ'יו סלק", "price": null, "available": true, "featured": false, "image": "assets/img/platters/beet-carpaccio-640.webp", "imageLg": "assets/img/platters/beet-carpaccio-1200.webp" },
+    { "id": "home-fries", "categoryId": "bites", "name": "הום פרייז", "price": null, "available": true, "featured": false, "image": "assets/img/platters/home-fries-640.webp", "imageLg": "assets/img/platters/home-fries-1200.webp" },
+    { "id": "sourdough", "categoryId": "bites", "name": "לחם מחמצת", "price": null, "available": true, "featured": false, "image": "assets/img/platters/sourdough-640.webp", "imageLg": "assets/img/platters/sourdough-1200.webp" }
+  ]
+}

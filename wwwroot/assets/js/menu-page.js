@@ -8,6 +8,8 @@
   /* hand-drawn line icons per category (48x48, stroke) */
   const S = 'viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"';
   const CAT_ICONS = {
+    trays: `<svg ${S}><rect x="5" y="19" width="38" height="16" rx="3"/><path d="M5 27h38"/><path d="M14 19v-4m10 4v-6m10 6v-4"/><path d="M12 35v3m24-3v3"/></svg>`,
+    bites: `<svg ${S}><circle cx="16" cy="28" r="7"/><circle cx="32" cy="28" r="7"/><circle cx="24" cy="16" r="7"/><path d="M6 40h36"/></svg>`,
     breakfast: `<svg ${S}><circle cx="21" cy="27" r="12"/><circle cx="21" cy="27" r="4.5"/><path d="M33 27h10"/><path d="M14 9c-1.5 2 1.5 3 0 5M21 8c-1.5 2 1.5 3 0 5"/></svg>`,
     starters: `<svg ${S}><path d="M9 26h30a15 15 0 0 1-30 0Z"/><path d="M18 40h12"/><path d="M19 19c-2-2.5 2-4 0-7M29 19c-2-2.5 2-4 0-7"/></svg>`,
     salads: `<svg ${S}><path d="M8 27h32a16 16 0 0 1-32 0Z"/><path d="M24 21c-1-7 3-12 10-13 .5 7-3.5 12-10 13Z"/><path d="M24 21c-4-3-9-3-12-1"/></svg>`,
@@ -137,7 +139,7 @@
 
   render();
 
-  /* deep link: /menu#cat-pizzas */
+  /* deep link: /platters#cat-trays */
   if (location.hash) {
     const el = document.getElementById(location.hash.slice(1));
     if (el) setTimeout(() => el.scrollIntoView({ behavior: "smooth" }), 150);

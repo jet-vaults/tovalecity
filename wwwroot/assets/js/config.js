@@ -7,14 +7,17 @@ window.TOVALE = {
   phone: "08-661-1880",
   phone2: "077-961-1880",
   cateringPhone: "050-589-5205",
-  address: "בן יהודה 23, שדרות",
-  mapsUrl: "https://maps.google.com/?q=בן יהודה 23 שדרות",
-  wazeUrl: "https://waze.com/ul?q=בן יהודה 23 שדרות&navigate=yes",
+  address: "אהבת ישראל 17, שדרות",
+  kosher: "כשר למהדרין - רבנות שדרות",
+  menuPdf: "/assets/docs/tovale-menu-2025.pdf",
+  cateringPdf: "/assets/docs/tovale-catering-2025-26.pdf",
+  mapsUrl: "https://maps.google.com/?q=אהבת ישראל 17 שדרות",
+  wazeUrl: "https://waze.com/ul?q=אהבת ישראל 17 שדרות&navigate=yes",
   facebook: "https://he-il.facebook.com/tnovala/",
   instagram: "https://www.instagram.com/tovale_city/reels/",
   hours: [
     { d: "ראשון – חמישי", h: "08:00 – 23:00" },
     { d: "מוצאי שבת", h: "19:30 – 00:00" }
   ],
-  menuDataUrl: "data/menu.json"
+  menuDataUrl: "/data/platters.json"
 };
