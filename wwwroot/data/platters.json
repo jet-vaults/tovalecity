@@ -1,51 +1,701 @@
 {
   "currency": "₪",
-  "note": "מחירים ותיאורים יתווספו לפי התפריט המסודר של טובל'ה. price=null מסתיר מחיר באתר.",
+  "note": "מחירים לפי תפריט מגשי האירוח 2025-26. price=null מסתיר מחיר באתר.",
   "categories": [
-    { "id": "trays", "name": "מגשי אירוח", "nav": "מגשי אירוח", "note": "מגשים עשירים ומעוצבים, מוכנים להגשה - לאירוח בבית, במשרד ובכל שמחה." },
-    { "id": "salads", "name": "סלטים", "nav": "סלטים", "note": "סלטים טריים בקערות אירוח גדולות, נחתכים ביום ההזמנה." },
-    { "id": "bites", "name": "מנות ופינוקים", "nav": "מנות ופינוקים", "note": "מנות חמות, מאפים ופינוקים קטנים שמשלימים את השולחן." }
+    {
+      "id": "salads",
+      "name": "נבחרת הסלטים",
+      "nav": "סלטים",
+      "note": "קערה בנפח 2.7 ליטר, כולל 10 מקלות שום - 96 ₪ לסלט."
+    },
+    {
+      "id": "starters",
+      "name": "מנות פתיחה",
+      "nav": "מנות פתיחה",
+      "note": "מגשים ומנות פתיחה שפותחים את השולחן."
+    },
+    {
+      "id": "mains",
+      "name": "מנות עיקריות",
+      "nav": "עיקריות",
+      "note": "מרק חם בעונת החורף בלבד. ניתן להזמין את מנת קוסקוס הבית בקייטרינג הכולל עריכה בלבד."
+    },
+    {
+      "id": "trays",
+      "name": "המאפים שלנו",
+      "nav": "מגשי אירוח",
+      "note": "מגשים עשירים ומעוצבים, מוכנים להגשה - לאירוח בבית, במשרד ובכל שמחה."
+    }
   ],
   "toppings": [],
   "toastToppings": [],
   "addonGroups": {},
   "items": [
-    { "id": "antipasti-tray", "categoryId": "trays", "name": "מגש אנטיפסטי", "price": null, "available": true, "featured": true, "image": "assets/img/platters/antipasti-tray-640.webp", "imageLg": "assets/img/platters/antipasti-tray-1200.webp" },
-    { "id": "bruschetta-tray", "categoryId": "trays", "name": "מגש ברוסקטות", "price": null, "available": true, "featured": true, "image": "assets/img/platters/bruschetta-tray-640.webp", "imageLg": "assets/img/platters/bruschetta-tray-1200.webp" },
-    { "id": "cheese-platter", "categoryId": "trays", "name": "פלטת גבינות", "price": null, "available": true, "featured": true, "image": "assets/img/platters/cheese-platter-640.webp", "imageLg": "assets/img/platters/cheese-platter-1200.webp" },
-    { "id": "pizza-tray", "categoryId": "trays", "name": "מגש פיצות", "price": null, "available": true, "featured": true, "image": "assets/img/platters/pizza-tray-640.webp", "imageLg": "assets/img/platters/pizza-tray-1200.webp" },
-    { "id": "focaccia-tray", "categoryId": "trays", "name": "מגש פוקאצ'ות", "price": null, "available": true, "featured": true, "image": "assets/img/platters/focaccia-tray-640.webp", "imageLg": "assets/img/platters/focaccia-tray-1200.webp" },
-    { "id": "tortilla-tray", "categoryId": "trays", "name": "מגש טורטיות", "price": null, "available": true, "featured": false, "image": "assets/img/platters/tortilla-tray-640.webp", "imageLg": "assets/img/platters/tortilla-tray-1200.webp" },
-    { "id": "ziva-tray", "categoryId": "trays", "name": "מגש זיוויות", "price": null, "available": true, "featured": false, "image": "assets/img/platters/ziva-tray-640.webp", "imageLg": "assets/img/platters/ziva-tray-1200.webp" },
-    { "id": "sambusak-malawach-tray", "categoryId": "trays", "name": "מגש סמבוסק ומלאווח", "price": null, "available": true, "featured": false, "image": "assets/img/platters/sambusak-malawach-tray-640.webp", "imageLg": "assets/img/platters/sambusak-malawach-tray-1200.webp" },
-    { "id": "bourekas-treats", "categoryId": "trays", "name": "מגש בורקס פינוקים", "price": null, "available": true, "featured": false, "image": "assets/img/platters/bourekas-treats-640.webp", "imageLg": "assets/img/platters/bourekas-treats-1200.webp" },
-    { "id": "filled-croissants", "categoryId": "trays", "name": "קרואסונים במילוי מגוון", "price": null, "available": true, "featured": false, "image": "assets/img/platters/filled-croissants-640.webp", "imageLg": "assets/img/platters/filled-croissants-1200.webp" },
-    { "id": "vine-leaves-tray", "categoryId": "trays", "name": "מגש עלי גפן", "price": null, "available": true, "featured": false, "image": "assets/img/platters/vine-leaves-tray-640.webp", "imageLg": "assets/img/platters/vine-leaves-tray-1200.webp" },
-    { "id": "vegetable-tray", "categoryId": "trays", "name": "מגש ירקות", "price": null, "available": true, "featured": false, "image": "assets/img/platters/vegetable-tray-640.webp", "imageLg": "assets/img/platters/vegetable-tray-1200.webp" },
-
-    { "id": "salad-tovale", "categoryId": "salads", "name": "סלט טובל'ה", "price": null, "available": true, "featured": true, "image": "assets/img/platters/salad-tovale-640.webp", "imageLg": "assets/img/platters/salad-tovale-1200.webp" },
-    { "id": "salad-health", "categoryId": "salads", "name": "סלט בריאות", "price": null, "available": true, "featured": false, "image": "assets/img/platters/salad-health-640.webp", "imageLg": "assets/img/platters/salad-health-1200.webp" },
-    { "id": "salad-greek", "categoryId": "salads", "name": "סלט יווני", "price": null, "available": true, "featured": false, "image": "assets/img/platters/salad-greek-640.webp", "imageLg": "assets/img/platters/salad-greek-1200.webp" },
-    { "id": "salad-caprese", "categoryId": "salads", "name": "סלט קפרזה", "price": null, "available": true, "featured": false, "image": "assets/img/platters/salad-caprese-640.webp", "imageLg": "assets/img/platters/salad-caprese-1200.webp" },
-    { "id": "salad-halloumi", "categoryId": "salads", "name": "סלט חלומי", "price": null, "available": true, "featured": false, "image": "assets/img/platters/salad-halloumi-640.webp", "imageLg": "assets/img/platters/salad-halloumi-1200.webp" },
-    { "id": "salad-salmon", "categoryId": "salads", "name": "סלט סלמון מוקפץ", "price": null, "available": true, "featured": false, "image": "assets/img/platters/salad-salmon-640.webp", "imageLg": "assets/img/platters/salad-salmon-1200.webp" },
-    { "id": "salad-asian", "categoryId": "salads", "name": "סלט אסיאתי", "price": null, "available": true, "featured": false, "image": "assets/img/platters/salad-asian-640.webp", "imageLg": "assets/img/platters/salad-asian-1200.webp" },
-    { "id": "salad-crispy", "categoryId": "salads", "name": "סלט קריספי", "price": null, "available": true, "featured": false, "image": "assets/img/platters/salad-crispy-640.webp", "imageLg": "assets/img/platters/salad-crispy-1200.webp" },
-    { "id": "salad-israeli-market", "categoryId": "salads", "name": "סלט שוק ישראלי", "price": null, "available": true, "featured": false, "image": "assets/img/platters/salad-israeli-market-640.webp", "imageLg": "assets/img/platters/salad-israeli-market-1200.webp" },
-    { "id": "salad-pasta", "categoryId": "salads", "name": "סלט פסטה", "price": null, "available": true, "featured": false, "image": "assets/img/platters/salad-pasta-640.webp", "imageLg": "assets/img/platters/salad-pasta-1200.webp" },
-    { "id": "salad-bulgur", "categoryId": "salads", "name": "סלט בורגול", "price": null, "available": true, "featured": false, "image": "assets/img/platters/salad-bulgur-640.webp", "imageLg": "assets/img/platters/salad-bulgur-1200.webp" },
-    { "id": "salad-lentil", "categoryId": "salads", "name": "סלט עדשים", "price": null, "available": true, "featured": false, "image": "assets/img/platters/salad-lentil-640.webp", "imageLg": "assets/img/platters/salad-lentil-1200.webp" },
-    { "id": "salad-greens", "categoryId": "salads", "name": "סלט עלים ירוק", "price": null, "available": true, "featured": false, "image": "assets/img/platters/salad-greens-640.webp", "imageLg": "assets/img/platters/salad-greens-1200.webp" },
-    { "id": "salad-apple", "categoryId": "salads", "name": "סלט תפוחים", "price": null, "available": true, "featured": false, "image": "assets/img/platters/salad-apple-640.webp", "imageLg": "assets/img/platters/salad-apple-1200.webp" },
-
-    { "id": "arancini", "categoryId": "bites", "name": "כדורי ארנצ'יני", "price": null, "available": true, "featured": false, "image": "assets/img/platters/arancini-640.webp", "imageLg": "assets/img/platters/arancini-1200.webp" },
-    { "id": "mini-sabich", "categoryId": "bites", "name": "מיני סביח", "price": null, "available": true, "featured": false, "image": "assets/img/platters/mini-sabich-640.webp", "imageLg": "assets/img/platters/mini-sabich-1200.webp" },
-    { "id": "mini-frikasse", "categoryId": "bites", "name": "מיני פריקסה", "price": null, "available": true, "featured": false, "image": "assets/img/platters/mini-frikasse-640.webp", "imageLg": "assets/img/platters/mini-frikasse-1200.webp" },
-    { "id": "eggplant-rolls", "categoryId": "bites", "name": "גלילות חציל", "price": null, "available": true, "featured": false, "image": "assets/img/platters/eggplant-rolls-640.webp", "imageLg": "assets/img/platters/eggplant-rolls-1200.webp" },
-    { "id": "veg-patties", "categoryId": "bites", "name": "קציצות ירק", "price": null, "available": true, "featured": false, "image": "assets/img/platters/veg-patties-640.webp", "imageLg": "assets/img/platters/veg-patties-1200.webp" },
-    { "id": "eggplant-carpaccio", "categoryId": "bites", "name": "קרפצ'יו חציל", "price": null, "available": true, "featured": false, "image": "assets/img/platters/eggplant-carpaccio-640.webp", "imageLg": "assets/img/platters/eggplant-carpaccio-1200.webp" },
-    { "id": "beet-carpaccio", "categoryId": "bites", "name": "קרפצ'יו סלק", "price": null, "available": true, "featured": false, "image": "assets/img/platters/beet-carpaccio-640.webp", "imageLg": "assets/img/platters/beet-carpaccio-1200.webp" },
-    { "id": "home-fries", "categoryId": "bites", "name": "הום פרייז", "price": null, "available": true, "featured": false, "image": "assets/img/platters/home-fries-640.webp", "imageLg": "assets/img/platters/home-fries-1200.webp" },
-    { "id": "sourdough", "categoryId": "bites", "name": "לחם מחמצת", "price": null, "available": true, "featured": false, "image": "assets/img/platters/sourdough-640.webp", "imageLg": "assets/img/platters/sourdough-1200.webp" }
+    {
+      "id": "salad-tovale",
+      "categoryId": "salads",
+      "name": "סלט טובל'ה",
+      "description": "מיקס חסה, מלפפון, שרי, טונה, תירס, קוביות תפוח אדמה וביצה קשה",
+      "price": 96,
+      "available": true,
+      "featured": true,
+      "image": "assets/img/platters/salad-tovale-640.webp",
+      "imageLg": "assets/img/platters/salad-tovale-1200.webp"
+    },
+    {
+      "id": "salad-halloumi",
+      "categoryId": "salads",
+      "name": "סלט חלומי מטוגן",
+      "description": "מיקס חסה, מלפפון, שרי, בולגרית, תירס וקוביות גבינת חלומי",
+      "price": 96,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/salad-halloumi-640.webp",
+      "imageLg": "assets/img/platters/salad-halloumi-1200.webp"
+    },
+    {
+      "id": "salad-health",
+      "categoryId": "salads",
+      "name": "סלט בריאות",
+      "description": "מיקס חסה, מלפפון, שרי, מיקס פיצוחים, ירק עלים, פטריות טריות וגזר בתיבול ישראלי",
+      "price": 96,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/salad-health-640.webp",
+      "imageLg": "assets/img/platters/salad-health-1200.webp"
+    },
+    {
+      "id": "salad-greek",
+      "categoryId": "salads",
+      "name": "סלט יווני",
+      "description": "מיקס חסה, מלפפון, שרי, בולגרית, קוביות גמבה וזיתים שחורים",
+      "price": 96,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/salad-greek-640.webp",
+      "imageLg": "assets/img/platters/salad-greek-1200.webp"
+    },
+    {
+      "id": "salad-crispy",
+      "categoryId": "salads",
+      "name": "סלט קריספי בטטה",
+      "description": "מיקס חסה, מלפפון, שרי, ניוקי גבינות צבעוני, בולגרית, ירק עלים ובטטה קריספית",
+      "price": 96,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/salad-crispy-640.webp",
+      "imageLg": "assets/img/platters/salad-crispy-1200.webp"
+    },
+    {
+      "id": "salad-salmon",
+      "categoryId": "salads",
+      "name": "סלט סלמון מוקפץ",
+      "description": "מיקס חסה, מלפפון, שרי, נתחי סלמון מעושן מוקפצים עם בצל, גמבה ופטריות טריות בצ'ילי מתוק וטריאקי",
+      "price": 96,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/salad-salmon-640.webp",
+      "imageLg": "assets/img/platters/salad-salmon-1200.webp"
+    },
+    {
+      "id": "salad-caesar",
+      "categoryId": "salads",
+      "name": "סלט קיסר",
+      "description": "חסה, קרוטונים, גבינת פרמזן ורוטב קיסר",
+      "price": 96,
+      "available": true,
+      "featured": true
+    },
+    {
+      "id": "salad-caprese",
+      "categoryId": "salads",
+      "name": "סלט קפרזה",
+      "description": "מיקס עגבניות שרי, בייבי מוצרלה, עלי בזיליקום בתיבול שמן זית וחומץ בלסמי",
+      "price": 96,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/salad-caprese-640.webp",
+      "imageLg": "assets/img/platters/salad-caprese-1200.webp"
+    },
+    {
+      "id": "salad-bulgur",
+      "categoryId": "salads",
+      "name": "סלט בורגול",
+      "description": "בורגול, מיקס ירק, שרי, פיצוחים, עלי חסה וקוביות בטטה",
+      "price": 96,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/salad-bulgur-640.webp",
+      "imageLg": "assets/img/platters/salad-bulgur-1200.webp"
+    },
+    {
+      "id": "salad-greens",
+      "categoryId": "salads",
+      "name": "סלט עלים ירוק",
+      "description": "ירק עלים מגוון, פיצוחים, בצל סגול ושרי בתיבול קלאסי",
+      "price": 96,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/salad-greens-640.webp",
+      "imageLg": "assets/img/platters/salad-greens-1200.webp"
+    },
+    {
+      "id": "salad-apple",
+      "categoryId": "salads",
+      "name": "סלט מיקס תפוחים",
+      "description": "מיקס חסה, מלפפון, שרי, מיקס פיצוחים ופרוסות תפוח בתיבול ויניגרט דבש",
+      "price": 96,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/salad-apple-640.webp",
+      "imageLg": "assets/img/platters/salad-apple-1200.webp"
+    },
+    {
+      "id": "salad-lentil",
+      "categoryId": "salads",
+      "name": "סלט עדשים שחורות",
+      "description": "ירק עלים, חמוציות, עדשים שחורות, קוביות בטטה ואגוזים",
+      "price": 96,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/salad-lentil-640.webp",
+      "imageLg": "assets/img/platters/salad-lentil-1200.webp"
+    },
+    {
+      "id": "salad-israeli-market",
+      "categoryId": "salads",
+      "name": "סלט שוק ישראלי",
+      "description": "חסה, מלפפון, שרי, גמבה צבעונית, גזר, פטריות וירוקים",
+      "price": 96,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/salad-israeli-market-640.webp",
+      "imageLg": "assets/img/platters/salad-israeli-market-1200.webp"
+    },
+    {
+      "id": "salad-pasta",
+      "categoryId": "salads",
+      "name": "סלט פסטה קר",
+      "description": "פסטה פנה קר, קוביות בטטה, רוטב פסטו, זיתים שחורים, שרי וירוקים",
+      "price": 96,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/salad-pasta-640.webp",
+      "imageLg": "assets/img/platters/salad-pasta-1200.webp"
+    },
+    {
+      "id": "salad-asian",
+      "categoryId": "salads",
+      "name": "סלט כרוב אסיאתי",
+      "description": "כרוב לבן, פיצוחים, סומסום, ירוקים ותיבול מתקתק",
+      "price": 96,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/salad-asian-640.webp",
+      "imageLg": "assets/img/platters/salad-asian-1200.webp"
+    },
+    {
+      "id": "eggplant-rolls",
+      "categoryId": "starters",
+      "name": "מגש גלילות חצילים",
+      "description": "במילוי גבינת שמנת ורוטב עגבניות / אלפרדו",
+      "price": 110,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/eggplant-rolls-640.webp",
+      "imageLg": "assets/img/platters/eggplant-rolls-1200.webp"
+    },
+    {
+      "id": "vegetable-tray",
+      "categoryId": "starters",
+      "name": "מגש ירקות טריים",
+      "description": "מלפפון, גזר, גמבה צבעונית, קולורבי, זיתי סינטה, שרי צבעוני, תירס גמדי, לבבות דקל ורטבים",
+      "price": 87,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/vegetable-tray-640.webp",
+      "imageLg": "assets/img/platters/vegetable-tray-1200.webp"
+    },
+    {
+      "id": "beet-carpaccio",
+      "categoryId": "starters",
+      "name": "קרפצ'יו סלק",
+      "description": "פרוסות סלק דקות, בולגרית, פיצוחים וירק קצוץ",
+      "price": 75,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/beet-carpaccio-640.webp",
+      "imageLg": "assets/img/platters/beet-carpaccio-1200.webp"
+    },
+    {
+      "id": "antipasti-tray",
+      "categoryId": "starters",
+      "name": "מגש אנטיפסטי",
+      "description": "מקלות גמבה, בטטה, חציל, פלפל חריף ובצל סגול",
+      "price": 95,
+      "available": true,
+      "featured": true,
+      "image": "assets/img/platters/antipasti-tray-640.webp",
+      "imageLg": "assets/img/platters/antipasti-tray-1200.webp"
+    },
+    {
+      "id": "cheese-platter",
+      "categoryId": "starters",
+      "name": "פלטת גבינות",
+      "description": "חמישה סוגים כולל קרקרים",
+      "price": 135,
+      "available": true,
+      "featured": true,
+      "image": "assets/img/platters/cheese-platter-640.webp",
+      "imageLg": "assets/img/platters/cheese-platter-1200.webp"
+    },
+    {
+      "id": "arancini",
+      "categoryId": "starters",
+      "name": "כדורי ארנצ'יני",
+      "description": "20 יחידות על בסיס עלי חסה בליווי צ'ילי מתוק",
+      "price": 180,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/arancini-640.webp",
+      "imageLg": "assets/img/platters/arancini-1200.webp"
+    },
+    {
+      "id": "home-fries",
+      "categoryId": "starters",
+      "name": "הום פרייז",
+      "description": "קוביות תפוחי אדמה מטוגנים ברוטב צ'ילי",
+      "price": 90,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/home-fries-640.webp",
+      "imageLg": "assets/img/platters/home-fries-1200.webp"
+    },
+    {
+      "id": "vine-leaves-tray",
+      "categoryId": "starters",
+      "name": "מגש עלי גפן",
+      "description": "40 יחידות ממולאים באורז",
+      "price": 200,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/vine-leaves-tray-640.webp",
+      "imageLg": "assets/img/platters/vine-leaves-tray-1200.webp"
+    },
+    {
+      "id": "sourdough",
+      "categoryId": "starters",
+      "name": "לחם מחמצת",
+      "description": "זוג לחמים ו־6 סוגי מטבלי הבית",
+      "price": 99,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/sourdough-640.webp",
+      "imageLg": "assets/img/platters/sourdough-1200.webp"
+    },
+    {
+      "id": "eggplant-carpaccio",
+      "categoryId": "starters",
+      "name": "קרפצ'יו חציל",
+      "description": "חציל קלוי בגריל מתובל, מוגש עם טחינה, כוסברה טרייה וצ'ילי חריף",
+      "price": 96,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/eggplant-carpaccio-640.webp",
+      "imageLg": "assets/img/platters/eggplant-carpaccio-1200.webp"
+    },
+    {
+      "id": "main-pasta",
+      "categoryId": "mains",
+      "name": "עיקרית ספגטי / פנה / פרפדלה",
+      "description": "ברוטב אלפרדו / רוזה / עגבניות (הקרמה חינם)",
+      "price": 105,
+      "available": true,
+      "featured": true,
+      "options": [
+        {
+          "id": "pasta",
+          "name": "סוג פסטה",
+          "required": true,
+          "choices": [
+            {
+              "id": "pasta-1",
+              "label": "ספגטי",
+              "priceDelta": 0
+            },
+            {
+              "id": "pasta-2",
+              "label": "פנה",
+              "priceDelta": 0
+            },
+            {
+              "id": "pasta-3",
+              "label": "פרפדלה",
+              "priceDelta": 0
+            }
+          ]
+        },
+        {
+          "id": "sauce",
+          "name": "רוטב",
+          "required": true,
+          "choices": [
+            {
+              "id": "sauce-1",
+              "label": "אלפרדו",
+              "priceDelta": 0
+            },
+            {
+              "id": "sauce-2",
+              "label": "רוזה",
+              "priceDelta": 0
+            },
+            {
+              "id": "sauce-3",
+              "label": "עגבניות",
+              "priceDelta": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "main-ravioli",
+      "categoryId": "mains",
+      "name": "עיקרית רביולי",
+      "description": "רביולי בטטה / גבינה / תפוח אדמה, ניוקי גבינות או טורטליני ריקוטה ואגוזים, ברוטב אלפרדו / רוזה / עגבניות (הקרמה חינם)",
+      "price": 115,
+      "available": true,
+      "featured": true,
+      "options": [
+        {
+          "id": "ravioli",
+          "name": "סוג",
+          "required": true,
+          "choices": [
+            {
+              "id": "ravioli-1",
+              "label": "רביולי בטטה",
+              "priceDelta": 0
+            },
+            {
+              "id": "ravioli-2",
+              "label": "רביולי גבינה",
+              "priceDelta": 0
+            },
+            {
+              "id": "ravioli-3",
+              "label": "רביולי תפוח אדמה",
+              "priceDelta": 0
+            },
+            {
+              "id": "ravioli-4",
+              "label": "ניוקי גבינות",
+              "priceDelta": 0
+            },
+            {
+              "id": "ravioli-5",
+              "label": "טורטליני ריקוטה ואגוזים",
+              "priceDelta": 0
+            }
+          ]
+        },
+        {
+          "id": "rsauce",
+          "name": "רוטב",
+          "required": true,
+          "choices": [
+            {
+              "id": "rsauce-1",
+              "label": "אלפרדו",
+              "priceDelta": 0
+            },
+            {
+              "id": "rsauce-2",
+              "label": "רוזה",
+              "priceDelta": 0
+            },
+            {
+              "id": "rsauce-3",
+              "label": "עגבניות",
+              "priceDelta": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "main-stirfry",
+      "categoryId": "mains",
+      "name": "מגש מוקפץ ירקות",
+      "description": "מיקס נודלס, גמבה, פטריות טריות, בצל סגול, גזר, שרי וכרוב סגול מוקפצים ברוטב טריאקי וצ'ילי מתוק",
+      "price": 115,
+      "available": true,
+      "featured": true
+    },
+    {
+      "id": "main-shakshuka",
+      "categoryId": "mains",
+      "name": "מגש שקשוקה",
+      "description": "10 ביצים + לחם מחמצת פרוס",
+      "price": 115,
+      "available": true,
+      "featured": true
+    },
+    {
+      "id": "main-salmon",
+      "categoryId": "mains",
+      "name": "פלטת דג סלמון",
+      "description": "אפוי שלם בתנור לצד אנטיפסטי ולחם מחמצת",
+      "price": 280,
+      "available": true,
+      "featured": true
+    },
+    {
+      "id": "bourekas-treats",
+      "categoryId": "trays",
+      "name": "מגש בורקס פינוקים קטנים",
+      "description": "20 יח' במילוי גבינה / תפוח אדמה, עגבניה וביצה קשה",
+      "price": 180,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/bourekas-treats-640.webp",
+      "imageLg": "assets/img/platters/bourekas-treats-1200.webp"
+    },
+    {
+      "id": "mini-frikasse",
+      "categoryId": "trays",
+      "name": "מגש מיני פריקסה",
+      "description": "20 יח' - מלית טונה, ביצה קשה, תפוח אדמה, ירק עלים, מלפפון ועגבניה",
+      "price": 200,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/mini-frikasse-640.webp",
+      "imageLg": "assets/img/platters/mini-frikasse-1200.webp"
+    },
+    {
+      "id": "mini-sabich",
+      "categoryId": "trays",
+      "name": "מגש סביח מיני פרנה / פיתה כוסמין",
+      "description": "20 יח' במילוי חציל, בטטה, תפוח אדמה, ביצה קשה ומלפפון חמוץ לצד טחינה",
+      "price": 200,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/mini-sabich-640.webp",
+      "imageLg": "assets/img/platters/mini-sabich-1200.webp",
+      "options": [
+        {
+          "id": "bread",
+          "name": "לחם",
+          "required": true,
+          "choices": [
+            {
+              "id": "bread-1",
+              "label": "מיני פרנה",
+              "priceDelta": 0
+            },
+            {
+              "id": "bread-2",
+              "label": "פיתה כוסמין",
+              "priceDelta": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ziva-tray",
+      "categoryId": "trays",
+      "name": "מגש זיוות",
+      "description": "20 יח' - מקלות זיווה במילוי מיקס גבינות לצד עגבניות מרוסקות",
+      "price": 140,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/ziva-tray-640.webp",
+      "imageLg": "assets/img/platters/ziva-tray-1200.webp"
+    },
+    {
+      "id": "tortilla-tray",
+      "categoryId": "trays",
+      "name": "מגש טורטיות",
+      "description": "20 חצאים - מילוי 1 לבחירה",
+      "price": 140,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/tortilla-tray-640.webp",
+      "imageLg": "assets/img/platters/tortilla-tray-1200.webp",
+      "options": [
+        {
+          "id": "tfill",
+          "name": "מילוי",
+          "required": true,
+          "choices": [
+            {
+              "id": "tfill-1",
+              "label": "טוניסאי",
+              "priceDelta": 0
+            },
+            {
+              "id": "tfill-2",
+              "label": "אנטיפסטי פסטו",
+              "priceDelta": 0
+            },
+            {
+              "id": "tfill-3",
+              "label": "טונה פיקנטית",
+              "priceDelta": 0
+            },
+            {
+              "id": "tfill-4",
+              "label": "יווני",
+              "priceDelta": 0
+            },
+            {
+              "id": "tfill-5",
+              "label": "אבוקדו",
+              "priceDelta": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sambusak-malawach-tray",
+      "categoryId": "trays",
+      "name": "מגש סמבוסק מלוואח",
+      "description": "20 יח' - ממולא מוקפץ / טונה / גבינות",
+      "price": 140,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/sambusak-malawach-tray-640.webp",
+      "imageLg": "assets/img/platters/sambusak-malawach-tray-1200.webp",
+      "options": [
+        {
+          "id": "sfill",
+          "name": "מילוי",
+          "required": true,
+          "choices": [
+            {
+              "id": "sfill-1",
+              "label": "מוקפץ",
+              "priceDelta": 0
+            },
+            {
+              "id": "sfill-2",
+              "label": "טונה",
+              "priceDelta": 0
+            },
+            {
+              "id": "sfill-3",
+              "label": "גבינות",
+              "priceDelta": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bruschetta-tray",
+      "categoryId": "trays",
+      "name": "מגש ברוסקטות",
+      "description": "20 יח' במילוי לבחירה - מוקפץ סלמון מתקתק / פסטו ואנטיפסטי / סלט אבוקדו סלט קצוץ וסלמון",
+      "price": 120,
+      "available": true,
+      "featured": true,
+      "image": "assets/img/platters/bruschetta-tray-640.webp",
+      "imageLg": "assets/img/platters/bruschetta-tray-1200.webp",
+      "options": [
+        {
+          "id": "bfill",
+          "name": "מילוי",
+          "required": true,
+          "choices": [
+            {
+              "id": "bfill-1",
+              "label": "מוקפץ סלמון מתקתק",
+              "priceDelta": 0
+            },
+            {
+              "id": "bfill-2",
+              "label": "פסטו ואנטיפסטי",
+              "priceDelta": 0
+            },
+            {
+              "id": "bfill-3",
+              "label": "סלט אבוקדו, סלט קצוץ וסלמון",
+              "priceDelta": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "filled-croissants",
+      "categoryId": "trays",
+      "name": "פלטת קרואסון חמאה",
+      "description": "20 יח' - ישראלי: סלט אבוקדו / חביתה עם מלפפון ועגבניה (180 ₪), או סלמון: שמנת וחסה, בצל סגול ושרי (200 ₪)",
+      "price": 180,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/filled-croissants-640.webp",
+      "imageLg": "assets/img/platters/filled-croissants-1200.webp",
+      "options": [
+        {
+          "id": "cfill",
+          "name": "מילוי",
+          "required": true,
+          "choices": [
+            {
+              "id": "cfill-1",
+              "label": "ישראלי - סלט אבוקדו",
+              "priceDelta": 0
+            },
+            {
+              "id": "cfill-2",
+              "label": "ישראלי - חביתה, מלפפון ועגבניה",
+              "priceDelta": 0
+            },
+            {
+              "id": "cfill-3",
+              "label": "סלמון, שמנת וחסה",
+              "priceDelta": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pizza-tray",
+      "categoryId": "trays",
+      "name": "מגש פיצות אישיות",
+      "description": "15 יח' בתוספת לבחירה",
+      "price": 120,
+      "available": true,
+      "featured": true,
+      "image": "assets/img/platters/pizza-tray-640.webp",
+      "imageLg": "assets/img/platters/pizza-tray-1200.webp"
+    },
+    {
+      "id": "focaccia-tray",
+      "categoryId": "trays",
+      "name": "מגש פוקאצ'ות אישיות",
+      "description": "15 יח' - 2 מילויים לבחירה: חמאת שום מוקרמת / פסטו אנטיפסטי / יווני / פטריות ובצל מוקפצים בטריאקי",
+      "price": 120,
+      "available": true,
+      "featured": true,
+      "image": "assets/img/platters/focaccia-tray-640.webp",
+      "imageLg": "assets/img/platters/focaccia-tray-1200.webp"
+    },
+    {
+      "id": "veg-patties",
+      "categoryId": "trays",
+      "name": "מגש קציצות ירק",
+      "description": "30 יח' - בטטה, כרובית וברוקולי לצד טחינה",
+      "price": 180,
+      "available": true,
+      "featured": false,
+      "image": "assets/img/platters/veg-patties-640.webp",
+      "imageLg": "assets/img/platters/veg-patties-1200.webp"
+    }
   ]
 }

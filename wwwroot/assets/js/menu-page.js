@@ -23,6 +23,7 @@
     desserts: `<svg ${S}><path d="M12 40V24l24-9v25"/><path d="M8 40h32"/><path d="M12 32l24-9"/><circle cx="15" cy="16" r="2.2"/><path d="M15 13.8V10"/></svg>`,
     drinks: `<svg ${S}><path d="M15 14h18l-2.5 26h-13Z"/><path d="M16 22h16.5"/><path d="M28 14l7-9"/><path d="M21 30c.01 0 .01 0 0 0M26 33c.01 0 .01 0 0 0M23 36c.01 0 .01 0 0 0" stroke-width="3"/></svg>`
   };
+  CAT_ICONS.mains = CAT_ICONS.pastas;
 
   if (launcher) {
     launcher.innerHTML = menu.categories.map(c => `
