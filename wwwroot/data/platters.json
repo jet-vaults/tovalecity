@@ -25,6 +25,12 @@
       "name": "המאפים שלנו",
       "nav": "מגשי אירוח",
       "note": "מגשים עשירים ומעוצבים, מוכנים להגשה - לאירוח בבית, במשרד ובכל שמחה."
+    },
+    {
+      "id": "drinks",
+      "name": "שתייה קלה",
+      "nav": "שתייה",
+      "note": "בקבוק 1.5 ליטר - 15 ₪."
     }
   ],
   "toppings": [],
@@ -696,6 +702,49 @@
       "featured": false,
       "image": "assets/img/platters/veg-patties-640.webp",
       "imageLg": "assets/img/platters/veg-patties-1200.webp"
+    },
+    {
+      "id": "soft-drink",
+      "categoryId": "drinks",
+      "name": "שתייה קלה - בקבוק 1.5 ליטר",
+      "description": "קולה / זירו / פיוז טי / תפוזים / לימונענע",
+      "price": 15,
+      "available": true,
+      "featured": true,
+      "options": [
+        {
+          "id": "drink",
+          "name": "סוג שתייה",
+          "required": true,
+          "choices": [
+            {
+              "id": "drink-1",
+              "label": "קולה",
+              "priceDelta": 0
+            },
+            {
+              "id": "drink-2",
+              "label": "קולה זירו",
+              "priceDelta": 0
+            },
+            {
+              "id": "drink-3",
+              "label": "פיוז טי",
+              "priceDelta": 0
+            },
+            {
+              "id": "drink-4",
+              "label": "תפוזים",
+              "priceDelta": 0
+            },
+            {
+              "id": "drink-5",
+              "label": "לימונענע",
+              "priceDelta": 0
+            }
+          ]
+        }
+      ]
     }
   ]
 }
