@@ -254,6 +254,24 @@
   });
   document.addEventListener("keydown", e => { if (e.key === "Escape") closeCart(); });
 
+  /* soft drinks are offered inside the order drawer, not on the platters page */
+  const DRINK_PRICE = 15;
+  const DRINKS = ["קולה", "קולה זירו", "פיוז טי", "תפוזים", "לימונענע"];
+  function drinksBox(snap) {
+    const qtyOf = d => snap.lines.filter(l => l.itemId === "soft-drink-" + DRINKS.indexOf(d)).reduce((n, l) => n + l.qty, 0);
+    return `<div class="cart-drinks">
+      <p class="cart-drinks-q">רוצים משהו לשתות?</p>
+      <p class="cart-drinks-sub">בקבוק 1.5 ליטר · ${NIS(DRINK_PRICE)}</p>
+      <div class="cart-drinks-list">
+        ${DRINKS.map((d, i) => {
+          const q = qtyOf(d);
+          return `<button type="button" class="drink-chip${q ? " on" : ""}" data-drink="${i}" aria-label="הוספת ${esc(d)} 1.5 ליטר">
+            <span>+ ${esc(d)}</span>${q ? `<span class="drink-q">${q}</span>` : ""}</button>`;
+        }).join("")}
+      </div>
+    </div>`;
+  }
+
   function renderCart() {
     const snap = TovaleCart.get();
     const wrap = drawer.querySelector("[data-cart-items]");
@@ -276,13 +294,20 @@
             </div>
             <button class="link-btn" data-qremove>הסרה</button>
           </div>
-        </div>`).join("");
+        </div>`).join("") + drinksBox(snap);
     }
     drawer.querySelector("[data-cart-total]").textContent = NIS(snap.total);
     drawer.querySelector("[data-cart-total-row]").style.display = snap.total > 0 ? "" : "none";
   }
 
   drawer.addEventListener("click", e => {
+    const drinkBtn = e.target.closest("[data-drink]");
+    if (drinkBtn) {
+      const i = +drinkBtn.dataset.drink;
+      TovaleCart.add({ itemId: "soft-drink-" + i, name: `${DRINKS[i]} 1.5 ליטר`, unitPrice: DRINK_PRICE, qty: 1, options: [], addons: [], note: "" });
+      renderCart();
+      return;
+    }
     const lineEl = e.target.closest("[data-line]");
     if (!lineEl) return;
     const id = lineEl.dataset.line;

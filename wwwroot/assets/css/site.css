@@ -547,6 +547,14 @@ h1, h2, h3, .display { font-family: var(--font-display); font-weight: 800; line-
 .cart-line .link-btn { background: none; border: none; color: var(--danger); font-weight: 700; font-size: 0.85rem; padding: 4px; }
 .cart-line .qty-stepper button { width: 34px; height: 36px; font-size: 1.1rem; }
 .cart-empty { text-align: center; color: var(--ink-soft); padding: 3rem 1rem; }
+.cart-drinks { border: 1px dashed var(--sand); border-radius: var(--radius); padding: 0.9rem 1rem 1rem; background: var(--paper); }
+.cart-drinks-q { font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; color: var(--green-900); }
+.cart-drinks-sub { color: var(--ink-soft); font-size: 0.86rem; margin-top: 1px; }
+.cart-drinks-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0.65rem; }
+.drink-chip { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--sand); background: var(--white); color: var(--ink); border-radius: 999px; padding: 6px 12px; font: inherit; font-size: 0.88rem; font-weight: 700; cursor: pointer; transition: border-color 0.15s ease, background-color 0.15s ease; }
+.drink-chip:hover { border-color: var(--green-800); }
+.drink-chip.on { border-color: var(--green-800); background: var(--green-100); }
+.drink-q { display: inline-grid; place-items: center; min-width: 20px; height: 20px; border-radius: 999px; background: var(--green-800); color: #fff; font-size: 0.75rem; padding: 0 5px; }
 .cart-foot { border-top: 1px solid var(--beige); padding: 1rem 1.3rem calc(1rem + env(safe-area-inset-bottom)); background: var(--paper); }
 .cart-total-row { display: flex; justify-content: space-between; font-weight: 800; font-size: 1.15rem; margin-bottom: 0.8rem; }
 .cart-foot .btn { width: 100%; }
