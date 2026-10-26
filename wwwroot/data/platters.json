@@ -744,7 +744,9 @@
             }
           ]
         }
-      ]
+      ],
+      "image": "assets/img/platters/soft-drinks-640.webp",
+      "imageLg": "assets/img/platters/soft-drinks-1200.webp"
     }
   ]
 }
