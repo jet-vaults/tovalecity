@@ -25,6 +25,12 @@
       "name": "המאפים שלנו",
       "nav": "מגשי אירוח",
       "note": "מגשים עשירים ומעוצבים, מוכנים להגשה - לאירוח בבית, במשרד ובכל שמחה."
+    },
+    {
+      "id": "desserts",
+      "name": "פינת המתוקים",
+      "nav": "מתוקים",
+      "note": "עוגות, מגשי פטיפור, קינוחים ומגשי פירות לסיום מתוק."
     }
   ],
   "toppings": [],
@@ -357,7 +363,9 @@
             }
           ]
         }
-      ]
+      ],
+      "image": "assets/img/platters/main-pasta-640.webp",
+      "imageLg": "assets/img/platters/main-pasta-1200.webp"
     },
     {
       "id": "main-ravioli",
@@ -422,7 +430,9 @@
             }
           ]
         }
-      ]
+      ],
+      "image": "assets/img/platters/main-ravioli-640.webp",
+      "imageLg": "assets/img/platters/main-ravioli-1200.webp"
     },
     {
       "id": "main-stirfry",
@@ -431,7 +441,9 @@
       "description": "מיקס נודלס, גמבה, פטריות טריות, בצל סגול, גזר, שרי וכרוב סגול מוקפצים ברוטב טריאקי וצ'ילי מתוק",
       "price": 115,
       "available": true,
-      "featured": true
+      "featured": true,
+      "image": "assets/img/platters/main-stirfry-640.webp",
+      "imageLg": "assets/img/platters/main-stirfry-1200.webp"
     },
     {
       "id": "main-shakshuka",
@@ -440,7 +452,9 @@
       "description": "10 ביצים + לחם מחמצת פרוס",
       "price": 115,
       "available": true,
-      "featured": true
+      "featured": true,
+      "image": "assets/img/platters/main-shakshuka-640.webp",
+      "imageLg": "assets/img/platters/main-shakshuka-1200.webp"
     },
     {
       "id": "main-salmon",
@@ -449,7 +463,9 @@
       "description": "אפוי שלם בתנור לצד אנטיפסטי ולחם מחמצת",
       "price": 280,
       "available": true,
-      "featured": true
+      "featured": true,
+      "image": "assets/img/platters/main-salmon-640.webp",
+      "imageLg": "assets/img/platters/main-salmon-1200.webp"
     },
     {
       "id": "bourekas-treats",
@@ -696,6 +712,159 @@
       "featured": false,
       "image": "assets/img/platters/veg-patties-640.webp",
       "imageLg": "assets/img/platters/veg-patties-1200.webp"
+    },
+    {
+      "id": "mini-quiche",
+      "categoryId": "trays",
+      "name": "פלטת מיני קיש משתנה",
+      "description": "16 יח' - תרד, שרי, בטטה, פטריות ובצל",
+      "price": 140,
+      "available": true,
+      "featured": true,
+      "image": "assets/img/platters/mini-quiche-640.webp",
+      "imageLg": "assets/img/platters/mini-quiche-1200.webp"
+    },
+    {
+      "id": "sweet-loaves",
+      "categoryId": "desserts",
+      "name": "זוג עוגות פס",
+      "description": "שמרים / בחושות",
+      "price": 82,
+      "available": true,
+      "featured": true,
+      "image": "assets/img/platters/sweet-loaves-640.webp",
+      "imageLg": "assets/img/platters/sweet-loaves-1200.webp",
+      "options": [
+        {
+          "id": "loaf",
+          "name": "סוג",
+          "required": true,
+          "choices": [
+            {
+              "id": "loaf-1",
+              "label": "שמרים",
+              "priceDelta": 0
+            },
+            {
+              "id": "loaf-2",
+              "label": "בחושות",
+              "priceDelta": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sweet-croissants",
+      "categoryId": "desserts",
+      "name": "מגש קרואסון מתוק",
+      "description": "1 ק\"ג",
+      "price": 65,
+      "available": true,
+      "featured": true,
+      "image": "assets/img/platters/sweet-croissants-640.webp",
+      "imageLg": "assets/img/platters/sweet-croissants-1200.webp"
+    },
+    {
+      "id": "petit-four",
+      "categoryId": "desserts",
+      "name": "מגש פטיפור מגוון",
+      "description": "אגוזים / גבינה / בראוניז / תפוחים",
+      "price": 220,
+      "available": true,
+      "featured": true,
+      "image": "assets/img/platters/petit-four-640.webp",
+      "imageLg": "assets/img/platters/petit-four-1200.webp"
+    },
+    {
+      "id": "chocolate-balls",
+      "categoryId": "desserts",
+      "name": "מגש כדורי שוקולד",
+      "description": "1 ק\"ג",
+      "price": 115,
+      "available": true,
+      "featured": true
+    },
+    {
+      "id": "mini-eclairs",
+      "categoryId": "desserts",
+      "name": "מגש מיני פחזניות",
+      "description": "36 יח' - חלבי או פרווה",
+      "price": 150,
+      "available": true,
+      "featured": true,
+      "image": "assets/img/platters/mini-eclairs-640.webp",
+      "imageLg": "assets/img/platters/mini-eclairs-1200.webp",
+      "options": [
+        {
+          "id": "ecl",
+          "name": "סוג",
+          "required": true,
+          "choices": [
+            {
+              "id": "ecl-1",
+              "label": "חלבי",
+              "priceDelta": 0
+            },
+            {
+              "id": "ecl-2",
+              "label": "פרווה",
+              "priceDelta": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cup-desserts",
+      "categoryId": "desserts",
+      "name": "מגש קינוחי כוסות",
+      "description": "20 יח'",
+      "price": 190,
+      "available": true,
+      "featured": true,
+      "image": "assets/img/platters/cup-desserts-640.webp",
+      "imageLg": "assets/img/platters/cup-desserts-1200.webp"
+    },
+    {
+      "id": "cookies-tray",
+      "categoryId": "desserts",
+      "name": "3 סוגי עוגיות במגש אירוח",
+      "description": "1 ק\"ג",
+      "price": 120,
+      "available": true,
+      "featured": true,
+      "image": "assets/img/platters/cookies-tray-640.webp",
+      "imageLg": "assets/img/platters/cookies-tray-1200.webp"
+    },
+    {
+      "id": "mousse-cakes",
+      "categoryId": "desserts",
+      "name": "עוגות מוס קרות",
+      "description": "",
+      "price": 60,
+      "available": true,
+      "featured": true
+    },
+    {
+      "id": "choco-sushi",
+      "categoryId": "desserts",
+      "name": "רול סושי שוקולד",
+      "description": "",
+      "price": 30,
+      "available": true,
+      "featured": true
+    },
+    {
+      "id": "fruit-platter",
+      "categoryId": "desserts",
+      "name": "פלטת פירות העונה",
+      "description": "פירות העונה חתוכים ומוכנים להגשה. המחיר לפי גודל המגש - נחזור אליכם עם הצעה.",
+      "price": null,
+      "available": true,
+      "featured": true,
+      "image": "assets/img/platters/fruit-platter-640.webp",
+      "imageLg": "assets/img/platters/fruit-platter-1200.webp"
     }
   ]
 }
