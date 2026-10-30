@@ -19,5 +19,7 @@ window.TOVALE = {
     { d: "ראשון – חמישי", h: "08:00 – 23:00" },
     { d: "מוצאי שבת", h: "19:30 – 00:00" }
   ],
+  // false = prices are hidden everywhere (menu, cart, order, WhatsApp). Data in platters.json is kept.
+  showPrices: false,
   menuDataUrl: "/data/platters.json"
 };

@@ -7,6 +7,14 @@
     if (MENU) return MENU;
     const res = await fetch(window.TOVALE.menuDataUrl, { cache: "no-cache" });
     MENU = await res.json();
+    if (window.TOVALE.showPrices === false) {
+      MENU.items.forEach(i => {
+        i.price = null;
+        (i.options || []).forEach(o => o.choices.forEach(c => { c.priceDelta = 0; }));
+        if (i.addons) { delete i.addons.priceBySize; i.addons.price = 0; }
+      });
+      Object.values(MENU.addonGroups || {}).forEach(g => (g.items || []).forEach(x => { x.price = 0; }));
+    }
     return MENU;
   };
 
@@ -170,7 +178,7 @@
       if (addons) addons.items.forEach((a, i) => {
         const el = sheetEl.querySelector(`[data-addon-price="${i}"]`);
         const p = addonUnitPrice(a);
-        el.textContent = p ? `+${NIS(p)}` : "חינם";
+        el.textContent = p ? `+${NIS(p)}` : (window.TOVALE.showPrices === false ? "" : "חינם");
       });
       // enforce max addons
       if (addons && addons.max) {

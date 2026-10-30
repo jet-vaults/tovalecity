@@ -18,6 +18,7 @@
 
   function snapshot() {
     const s = read();
+    if (window.TOVALE && window.TOVALE.showPrices === false) s.lines.forEach(l => { l.unitPrice = 0; (l.addons || []).forEach(a => { a.price = 0; }); });
     const count = s.lines.reduce((n, l) => n + l.qty, 0);
     const total = s.lines.reduce((n, l) => n + lineTotal(l), 0);
     return { lines: s.lines, count, total };

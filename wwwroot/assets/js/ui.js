@@ -255,13 +255,13 @@
   document.addEventListener("keydown", e => { if (e.key === "Escape") closeCart(); });
 
   /* soft drinks are offered inside the order drawer, not on the platters page */
-  const DRINK_PRICE = 15;
+  const DRINK_PRICE = window.TOVALE && window.TOVALE.showPrices === false ? 0 : 15;
   const DRINKS = ["קולה", "קולה זירו", "פיוז טי", "תפוזים", "לימונענע"];
   function drinksBox(snap) {
     const qtyOf = d => snap.lines.filter(l => l.itemId === "soft-drink-" + DRINKS.indexOf(d)).reduce((n, l) => n + l.qty, 0);
     return `<div class="cart-drinks">
       <p class="cart-drinks-q">רוצים משהו לשתות?</p>
-      <p class="cart-drinks-sub">בקבוק 1.5 ליטר · ${NIS(DRINK_PRICE)}</p>
+      <p class="cart-drinks-sub">בקבוק 1.5 ליטר${DRINK_PRICE ? ` · ${NIS(DRINK_PRICE)}` : ""}</p>
       <div class="cart-drinks-list">
         ${DRINKS.map((d, i) => {
           const q = qtyOf(d);
