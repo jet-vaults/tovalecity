@@ -118,7 +118,7 @@
   /* credit strip below the footer */
   const credit = document.createElement("div");
   credit.className = "site-credit";
-  credit.innerHTML = `Powered by <a href="https://einstein-web.co.il" target="_blank" rel="noopener">Einstein-web</a>`;
+  credit.innerHTML = `Powered by <a href="https://einstein-web.co.il" target="_blank" rel="noopener">Einstein Web</a> · <a href="https://einstein-web.co.il/osher-vatari/" target="_blank" rel="noopener">Osher Vatari</a>`;
   document.body.appendChild(credit);
 
   /* ---------- accessibility widget ---------- */
