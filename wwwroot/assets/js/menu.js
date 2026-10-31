@@ -122,10 +122,6 @@
                 </label>`).join("")}
             </div>
           </fieldset>` : ""}
-        <div class="opt-group">
-          <h3>הערות למנה</h3>
-          <textarea data-note placeholder="גודל מגש, כמות אורחים, בקשות מיוחדות... (לא חובה)" maxlength="200"></textarea>
-        </div>
       </div>
       <div class="sheet-foot">
         <div class="qty-stepper">
@@ -205,7 +201,7 @@
         qty,
         options: selectedOptions().map(o => ({ name: o.name, label: o.label })),
         addons: selectedAddons(),
-        note: sheetEl.querySelector("[data-note]").value.trim()
+        note: ""
       });
       closeSheet();
       window.tovaleToast(`${item.name} נוסף להזמנה 🎉`);
