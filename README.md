@@ -12,7 +12,7 @@
 | **Private storage** | `https://jetvaults.blob.core.windows.net/tovalecity-private/` |
 | **Public container** | `tovalecity` |
 | **Private container** | `tovalecity-private` |
-| **Activated** | No |
+| **Activated** | Yes |
 
 ## Nameservers
 
