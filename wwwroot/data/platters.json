@@ -110,7 +110,9 @@
       "description": "חסה, קרוטונים, גבינת פרמזן ורוטב קיסר",
       "price": 96,
       "available": true,
-      "featured": true
+      "featured": true,
+      "image": "assets/img/platters/salad-caesar-640.webp",
+      "imageLg": "assets/img/platters/salad-caesar-1200.webp"
     },
     {
       "id": "salad-caprese",
